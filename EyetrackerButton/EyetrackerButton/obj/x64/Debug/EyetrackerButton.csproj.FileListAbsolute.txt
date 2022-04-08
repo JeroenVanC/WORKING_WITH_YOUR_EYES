@@ -1,0 +1,11 @@
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\bin\x64\Debug\tobii\lib\tobii\tobii_stream_engine.dll
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\bin\x64\Debug\EyetrackerButton.exe.config
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\bin\x64\Debug\EyetrackerButton.exe
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\bin\x64\Debug\EyetrackerButton.pdb
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.Form1.resources
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.Properties.Resources.resources
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.csproj.GenerateResource.cache
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.csproj.CoreCompileInputs.cache
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.exe
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.pdb
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.csproj.AssemblyReference.cache
