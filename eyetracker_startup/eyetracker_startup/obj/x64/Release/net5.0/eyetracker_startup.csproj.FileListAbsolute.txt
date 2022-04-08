@@ -1,0 +1,16 @@
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\bin\x64\Release\net5.0\eyetracker_startup.exe
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\bin\x64\Release\net5.0\tobii\lib\tobii\tobii_stream_engine.dll
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\bin\x64\Release\net5.0\eyetracker_startup.deps.json
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\bin\x64\Release\net5.0\eyetracker_startup.runtimeconfig.json
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\bin\x64\Release\net5.0\eyetracker_startup.runtimeconfig.dev.json
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\bin\x64\Release\net5.0\eyetracker_startup.dll
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\bin\x64\Release\net5.0\ref\eyetracker_startup.dll
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\bin\x64\Release\net5.0\eyetracker_startup.pdb
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\obj\x64\Release\net5.0\eyetracker_startup.GeneratedMSBuildEditorConfig.editorconfig
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\obj\x64\Release\net5.0\eyetracker_startup.AssemblyInfoInputs.cache
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\obj\x64\Release\net5.0\eyetracker_startup.AssemblyInfo.cs
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\obj\x64\Release\net5.0\eyetracker_startup.csproj.CoreCompileInputs.cache
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\obj\x64\Release\net5.0\eyetracker_startup.dll
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\obj\x64\Release\net5.0\ref\eyetracker_startup.dll
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\obj\x64\Release\net5.0\eyetracker_startup.pdb
+C:\masterproef\code\eyetracker_startup\eyetracker_startup\obj\x64\Release\net5.0\eyetracker_startup.genruntimeconfig.cache

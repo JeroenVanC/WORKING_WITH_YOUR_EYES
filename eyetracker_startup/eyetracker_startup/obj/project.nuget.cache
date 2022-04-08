@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "k2nSaJY6RQBSauE5QmuQcllVxN3dQBEJThPxd42J+OtVMy73opZ07ASNRLHF5xJEz2L2SILvhUHm3+U/BPP8Bw==",
+  "success": true,
+  "projectFilePath": "C:\\masterproef\\code\\eyetracker_startup\\eyetracker_startup\\eyetracker_startup.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jeroe\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
