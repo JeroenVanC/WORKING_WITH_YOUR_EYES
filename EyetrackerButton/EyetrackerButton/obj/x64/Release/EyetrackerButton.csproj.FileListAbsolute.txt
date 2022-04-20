@@ -1,0 +1,12 @@
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\bin\x64\Release\tobii\lib\tobii\tobii_stream_engine.dll
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\bin\x64\Release\EyetrackerButton.exe.config
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\bin\x64\Release\EyetrackerButton.exe
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\bin\x64\Release\EyetrackerButton.pdb
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Release\EyetrackerButton.csproj.AssemblyReference.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Release\EyetrackerButton.csproj.SuggestedBindingRedirects.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Release\EyetrackerButton.Form1.resources
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Release\EyetrackerButton.Properties.Resources.resources
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Release\EyetrackerButton.csproj.GenerateResource.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Release\EyetrackerButton.csproj.CoreCompileInputs.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Release\EyetrackerButton.exe
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Release\EyetrackerButton.pdb

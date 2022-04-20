@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "k2nSaJY6RQBSauE5QmuQcllVxN3dQBEJThPxd42J+OtVMy73opZ07ASNRLHF5xJEz2L2SILvhUHm3+U/BPP8Bw==",
+  "dgSpecHash": "W929Dvoai34oYZ98puUMNeFrx9/jQ2zyz2yeJ9WA4EllfqWI9rJfmR5EwPju1cOlCItxX/eiKVTUQlC6i5iPOw==",
   "success": true,
-  "projectFilePath": "C:\\masterproef\\code\\eyetracker_startup\\eyetracker_startup\\eyetracker_startup.csproj",
+  "projectFilePath": "C:\\Users\\jonas\\SynologyDrive\\GIT\\WORKING_WITH_YOUR_EYES\\eyetracker_startup\\eyetracker_startup\\eyetracker_startup.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jeroe\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+    "C:\\Users\\jonas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512",
+    "C:\\Users\\jonas\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\jonas\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\jonas\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

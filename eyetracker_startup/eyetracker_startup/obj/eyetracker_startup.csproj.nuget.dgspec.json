@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\masterproef\\code\\eyetracker_startup\\eyetracker_startup\\eyetracker_startup.csproj": {}
+    "C:\\Users\\jonas\\SynologyDrive\\GIT\\WORKING_WITH_YOUR_EYES\\eyetracker_startup\\eyetracker_startup\\eyetracker_startup.csproj": {}
   },
   "projects": {
-    "C:\\masterproef\\code\\eyetracker_startup\\eyetracker_startup\\eyetracker_startup.csproj": {
+    "C:\\Users\\jonas\\SynologyDrive\\GIT\\WORKING_WITH_YOUR_EYES\\eyetracker_startup\\eyetracker_startup\\eyetracker_startup.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\masterproef\\code\\eyetracker_startup\\eyetracker_startup\\eyetracker_startup.csproj",
+        "projectUniqueName": "C:\\Users\\jonas\\SynologyDrive\\GIT\\WORKING_WITH_YOUR_EYES\\eyetracker_startup\\eyetracker_startup\\eyetracker_startup.csproj",
         "projectName": "eyetracker_startup",
-        "projectPath": "C:\\masterproef\\code\\eyetracker_startup\\eyetracker_startup\\eyetracker_startup.csproj",
-        "packagesPath": "C:\\Users\\jeroe\\.nuget\\packages\\",
-        "outputPath": "C:\\masterproef\\code\\eyetracker_startup\\eyetracker_startup\\obj\\",
+        "projectPath": "C:\\Users\\jonas\\SynologyDrive\\GIT\\WORKING_WITH_YOUR_EYES\\eyetracker_startup\\eyetracker_startup\\eyetracker_startup.csproj",
+        "packagesPath": "C:\\Users\\jonas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jonas\\SynologyDrive\\GIT\\WORKING_WITH_YOUR_EYES\\eyetracker_startup\\eyetracker_startup\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jeroe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jonas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,8 +51,20 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.12, 5.0.12]"
+              "version": "[5.0.13, 5.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
             }
           ],
           "frameworkReferences": {
@@ -60,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

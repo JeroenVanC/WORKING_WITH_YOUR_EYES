@@ -85,7 +85,8 @@ namespace Tobii.StreamEngine.Sample
             }
 
             // Connect to the first tracker found
-            string licensePath = @"C:\masterproef\code\eyetracker_startup\eyetracker_startup\tobii\se_license_key";
+            string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\eyetracker_startup\eyetracker_startup\tobii\se_license_key";
+
             IntPtr deviceContext;
             deviceContext = CreateTrackerWithLicense(apiContext, urls[0], licensePath);
             //result = Interop.tobii_device_create(apiContext, urls[0], Interop.tobii_field_of_use_t.TOBII_FIELD_OF_USE_STORE_OR_TRANSFER_FALSE, out deviceContext);
@@ -133,7 +134,7 @@ namespace Tobii.StreamEngine.Sample
 
 
             // This sample will collect 1000 gaze points
-            for (int i = 0; i < 1000; i++)
+            while(true)
             {
                 // Optionally block this thread until data is available. Especially useful if running in a separate thread.
                 Interop.tobii_wait_for_callbacks(new[] { deviceContext });

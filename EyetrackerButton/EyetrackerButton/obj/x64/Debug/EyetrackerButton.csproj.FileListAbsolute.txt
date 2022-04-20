@@ -9,3 +9,15 @@ C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerBu
 C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.exe
 C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.pdb
 C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.csproj.AssemblyReference.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\bin\x64\Debug\tobii\lib\tobii\tobii_stream_engine.dll
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\bin\x64\Debug\EyetrackerButton.exe.config
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\bin\x64\Debug\EyetrackerButton.exe
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\bin\x64\Debug\EyetrackerButton.pdb
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.csproj.AssemblyReference.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.csproj.SuggestedBindingRedirects.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.Form1.resources
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.Properties.Resources.resources
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.csproj.GenerateResource.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.csproj.CoreCompileInputs.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.exe
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.pdb

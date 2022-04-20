@@ -29,62 +29,105 @@ namespace EyetrackerButton
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnClickMe = new System.Windows.Forms.Button();
-            this.lblGazeDir = new System.Windows.Forms.Label();
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnDisconnect = new System.Windows.Forms.Button();
+            this.btnRecord = new System.Windows.Forms.Button();
+            this.lblX = new System.Windows.Forms.Label();
+            this.lblY = new System.Windows.Forms.Label();
+            this.lblX_Val = new System.Windows.Forms.Label();
+            this.lblY_val = new System.Windows.Forms.Label();
+            this.gazeBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnClickMe
-            // 
-            this.btnClickMe.Location = new System.Drawing.Point(345, 179);
-            this.btnClickMe.Name = "btnClickMe";
-            this.btnClickMe.Size = new System.Drawing.Size(104, 23);
-            this.btnClickMe.TabIndex = 0;
-            this.btnClickMe.Text = "START";
-            this.btnClickMe.UseVisualStyleBackColor = true;
-            this.btnClickMe.Click += new System.EventHandler(this.btnClickMe_Click);
-            // 
-            // lblGazeDir
-            // 
-            this.lblGazeDir.AutoSize = true;
-            this.lblGazeDir.Location = new System.Drawing.Point(378, 231);
-            this.lblGazeDir.Name = "lblGazeDir";
-            this.lblGazeDir.Size = new System.Drawing.Size(35, 13);
-            this.lblGazeDir.TabIndex = 1;
-            this.lblGazeDir.Text = "label1";
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(77, 37);
+            this.btnConnect.Location = new System.Drawing.Point(12, 12);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(75, 23);
-            this.btnConnect.TabIndex = 2;
-            this.btnConnect.Text = "CONNECT";
+            this.btnConnect.TabIndex = 0;
+            this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // btnDisconnect
             // 
-            this.btnDisconnect.Location = new System.Drawing.Point(669, 36);
+            this.btnDisconnect.Location = new System.Drawing.Point(93, 12);
             this.btnDisconnect.Name = "btnDisconnect";
-            this.btnDisconnect.Size = new System.Drawing.Size(85, 23);
-            this.btnDisconnect.TabIndex = 3;
-            this.btnDisconnect.Text = "DISCONNECT";
+            this.btnDisconnect.Size = new System.Drawing.Size(75, 23);
+            this.btnDisconnect.TabIndex = 1;
+            this.btnDisconnect.Text = "Disconnect";
             this.btnDisconnect.UseVisualStyleBackColor = true;
             this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
             // 
+            // btnRecord
+            // 
+            this.btnRecord.Location = new System.Drawing.Point(395, 217);
+            this.btnRecord.Name = "btnRecord";
+            this.btnRecord.Size = new System.Drawing.Size(117, 23);
+            this.btnRecord.TabIndex = 2;
+            this.btnRecord.Text = "Start Recording";
+            this.btnRecord.UseVisualStyleBackColor = true;
+            this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
+            // 
+            // lblX
+            // 
+            this.lblX.AutoSize = true;
+            this.lblX.Location = new System.Drawing.Point(392, 255);
+            this.lblX.Name = "lblX";
+            this.lblX.Size = new System.Drawing.Size(68, 13);
+            this.lblX.TabIndex = 3;
+            this.lblX.Text = "X-Coordinaat";
+            // 
+            // lblY
+            // 
+            this.lblY.AutoSize = true;
+            this.lblY.Location = new System.Drawing.Point(395, 272);
+            this.lblY.Name = "lblY";
+            this.lblY.Size = new System.Drawing.Size(68, 13);
+            this.lblY.TabIndex = 4;
+            this.lblY.Text = "Y-Coordinaat";
+            // 
+            // lblX_Val
+            // 
+            this.lblX_Val.AutoSize = true;
+            this.lblX_Val.Location = new System.Drawing.Point(476, 255);
+            this.lblX_Val.Name = "lblX_Val";
+            this.lblX_Val.Size = new System.Drawing.Size(0, 13);
+            this.lblX_Val.TabIndex = 5;
+            // 
+            // lblY_val
+            // 
+            this.lblY_val.AutoSize = true;
+            this.lblY_val.Location = new System.Drawing.Point(476, 271);
+            this.lblY_val.Name = "lblY_val";
+            this.lblY_val.Size = new System.Drawing.Size(0, 13);
+            this.lblY_val.TabIndex = 6;
+            // 
+            // gazeBox
+            // 
+            this.gazeBox.BackColor = System.Drawing.Color.Red;
+            this.gazeBox.Location = new System.Drawing.Point(1300, 21);
+            this.gazeBox.Name = "gazeBox";
+            this.gazeBox.Size = new System.Drawing.Size(25, 25);
+            this.gazeBox.TabIndex = 7;
+            this.gazeBox.TabStop = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1367, 547);
+            this.Controls.Add(this.gazeBox);
+            this.Controls.Add(this.lblY_val);
+            this.Controls.Add(this.lblX_Val);
+            this.Controls.Add(this.lblY);
+            this.Controls.Add(this.lblX);
+            this.Controls.Add(this.btnRecord);
             this.Controls.Add(this.btnDisconnect);
             this.Controls.Add(this.btnConnect);
-            this.Controls.Add(this.lblGazeDir);
-            this.Controls.Add(this.btnClickMe);
+            this.KeyPreview = true;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,10 +135,14 @@ namespace EyetrackerButton
 
         #endregion
 
-        private System.Windows.Forms.Button btnClickMe;
-        private System.Windows.Forms.Label lblGazeDir;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnDisconnect;
+        private System.Windows.Forms.Button btnRecord;
+        private System.Windows.Forms.Label lblX;
+        private System.Windows.Forms.Label lblY;
+        private System.Windows.Forms.Label lblX_Val;
+        private System.Windows.Forms.Label lblY_val;
+        private System.Windows.Forms.PictureBox gazeBox;
     }
 }
 

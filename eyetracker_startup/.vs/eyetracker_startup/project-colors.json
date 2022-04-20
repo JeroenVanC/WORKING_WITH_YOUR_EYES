@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2a900bad-3f23-429d-a8de-97874d91bb97": {
+      "ProjectGuid": "2a900bad-3f23-429d-a8de-97874d91bb97",
+      "DisplayName": "eyetracker_startup",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
