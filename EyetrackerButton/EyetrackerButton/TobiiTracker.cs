@@ -145,7 +145,7 @@ namespace EyetrackerButton
                 return;
             }
 
-            // Connect to the first tracker founds
+            // Connect to the first tracker found
             string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\tobii\se_license_key";
             IntPtr deviceContext;
             deviceContext = CreateTrackerWithLicense(apiContext, urls[0], licensePath);

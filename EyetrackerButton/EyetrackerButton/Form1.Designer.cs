@@ -37,6 +37,7 @@ namespace EyetrackerButton
             this.lblX_Val = new System.Windows.Forms.Label();
             this.lblY_val = new System.Windows.Forms.Label();
             this.gazeBox = new System.Windows.Forms.PictureBox();
+            this.btnCalibration = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,9 +114,20 @@ namespace EyetrackerButton
             this.gazeBox.TabIndex = 7;
             this.gazeBox.TabStop = false;
             // 
+            // btnCalibration
+            // 
+            this.btnCalibration.Location = new System.Drawing.Point(12, 41);
+            this.btnCalibration.Name = "btnCalibration";
+            this.btnCalibration.Size = new System.Drawing.Size(156, 23);
+            this.btnCalibration.TabIndex = 8;
+            this.btnCalibration.Text = "Personal Calibration";
+            this.btnCalibration.UseVisualStyleBackColor = true;
+            this.btnCalibration.Click += new System.EventHandler(this.btnCalibration_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1367, 547);
+            this.Controls.Add(this.btnCalibration);
             this.Controls.Add(this.gazeBox);
             this.Controls.Add(this.lblY_val);
             this.Controls.Add(this.lblX_Val);
@@ -143,6 +155,7 @@ namespace EyetrackerButton
         private System.Windows.Forms.Label lblX_Val;
         private System.Windows.Forms.Label lblY_val;
         private System.Windows.Forms.PictureBox gazeBox;
+        private System.Windows.Forms.Button btnCalibration;
     }
 }
 
