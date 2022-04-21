@@ -47,13 +47,29 @@ namespace EyetrackerButton
             while (true)
             {
                 TobiiTracker.record(connection.Item1);
-                Console.WriteLine($"Gaze point: {TobiiTracker.coordinaat_left.x},{TobiiTracker.coordinaat_left.y},{TobiiTracker.coordinaat_left.z}, {TobiiTracker.coordinaat_right.x}, {TobiiTracker.coordinaat_right.y}, {TobiiTracker.coordinaat_right.z}");
+                //Console.WriteLine($"Gaze point: {TobiiTracker.coordinaat_left.x},{TobiiTracker.coordinaat_left.y},{TobiiTracker.coordinaat_left.z}, {TobiiTracker.coordinaat_right.x}, {TobiiTracker.coordinaat_right.y}, {TobiiTracker.coordinaat_right.z}");
 
-                var x_coor = (TobiiTracker.coordinaat_left.x + TobiiTracker.coordinaat_right.x) / 2;
-                var y_coor = (TobiiTracker.coordinaat_left.y + TobiiTracker.coordinaat_right.y) / 2;
-                var z_coor = (TobiiTracker.coordinaat_left.z + TobiiTracker.coordinaat_right.z) / 2;
+                var x_gazePoint = (TobiiTracker.gazePoint_left.x + TobiiTracker.gazePoint_right.x) / 2;
+                var y_gazePoint = (TobiiTracker.gazePoint_left.y + TobiiTracker.gazePoint_right.y) / 2;
+                var z_gazePoint = (TobiiTracker.gazePoint_left.z + TobiiTracker.gazePoint_right.z) / 2;
 
-                Console.WriteLine($"Gaze point: {x_coor},{y_coor},{z_coor}");
+                var x_gazeOrigin = (TobiiTracker.gazeOrigin_left.x + TobiiTracker.gazeOrigin_right.x) / 2;
+                var y_gazeOrigin = (TobiiTracker.gazeOrigin_left.y + TobiiTracker.gazeOrigin_right.y) / 2;
+                var z_gazeOrigin = (TobiiTracker.gazeOrigin_left.z + TobiiTracker.gazeOrigin_right.z) / 2;
+
+                var yDist = y_gazePoint - y_gazeOrigin;
+                var yDiff = 0 - y_gazeOrigin;
+                var ratio = yDiff / yDist;
+
+                var xDist = x_gazePoint - x_gazeOrigin;
+                var xDiff = xDist * ratio;
+                var xCalc = x_gazeOrigin + xDiff;
+
+                var zDist = z_gazePoint - z_gazeOrigin;
+                var zDiff = zDist * ratio;
+                var zCalc = z_gazeOrigin + zDiff;
+
+                Console.WriteLine($"Gaze calc: {xCalc}, {0}, {zCalc}");
 
                 // update x-coor label
                 if (lblX_Val.InvokeRequired)

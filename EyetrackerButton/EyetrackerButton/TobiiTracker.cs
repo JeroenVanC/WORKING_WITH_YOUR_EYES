@@ -12,8 +12,10 @@ namespace EyetrackerButton
     {
         public static float coordinaat_x;
         public static float coordinaat_y;
-        public static TobiiVector3 coordinaat_left;
-        public static TobiiVector3 coordinaat_right;
+        public static TobiiVector3 gazePoint_left;
+        public static TobiiVector3 gazePoint_right;
+        public static TobiiVector3 gazeOrigin_left;
+        public static TobiiVector3 gazeOrigin_right;
 
         private static tobii_gaze_data_callback_t newOnGazePoint = new tobii_gaze_data_callback_t(OnGazePoint);
 
@@ -21,8 +23,10 @@ namespace EyetrackerButton
         {
             //coordinaat_x = gazePoint.position.x;
             //coordinaat_y = gazePoint.position.y;
-            coordinaat_left = gazeData.left.gaze_point_from_eye_tracker_mm_xyz;
-            coordinaat_right = gazeData.right.gaze_point_from_eye_tracker_mm_xyz;
+            gazePoint_left = gazeData.left.gaze_point_from_eye_tracker_mm_xyz;
+            gazePoint_right = gazeData.right.gaze_point_from_eye_tracker_mm_xyz;
+            gazeOrigin_left = gazeData.left.gaze_origin_from_eye_tracker_mm_xyz;
+            gazeOrigin_right = gazeData.right.gaze_origin_from_eye_tracker_mm_xyz;
         }
         public static IntPtr CreateTrackerWithLicense(IntPtr api, string url, string licenseFileName)
         {
