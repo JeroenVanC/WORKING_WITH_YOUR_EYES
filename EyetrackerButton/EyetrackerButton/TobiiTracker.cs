@@ -12,17 +12,17 @@ namespace EyetrackerButton
     {
         public static float coordinaat_x;
         public static float coordinaat_y;
+        public static TobiiVector3 coordinaat_left;
+        public static TobiiVector3 coordinaat_right;
 
-        private static tobii_gaze_point_callback_t newOnGazePoint = new tobii_gaze_point_callback_t(OnGazePoint);
+        private static tobii_gaze_data_callback_t newOnGazePoint = new tobii_gaze_data_callback_t(OnGazePoint);
 
-        private static void OnGazePoint(ref tobii_gaze_point_t gazePoint, IntPtr userData)
+        private static void OnGazePoint(ref tobii_gaze_data_t gazeData, IntPtr userData)
         {
-            // Check that the data is valid before using it
-            if (gazePoint.validity == tobii_validity_t.TOBII_VALIDITY_VALID)
-            {
-                coordinaat_x = gazePoint.position.x;
-                coordinaat_y = gazePoint.position.y;
-            }
+            //coordinaat_x = gazePoint.position.x;
+            //coordinaat_y = gazePoint.position.y;
+            coordinaat_left = gazeData.left.gaze_point_from_eye_tracker_mm_xyz;
+            coordinaat_right = gazeData.right.gaze_point_from_eye_tracker_mm_xyz;
         }
         public static IntPtr CreateTrackerWithLicense(IntPtr api, string url, string licenseFileName)
         {
@@ -73,13 +73,13 @@ namespace EyetrackerButton
             }
 
             // Connect to the first tracker found
-            string licensePath = @"C:\masterproef\code\EyetrackerButton\EyetrackerButton\tobii\se_license_key";
+            string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\tobii\se_license_key";
             IntPtr deviceContext;
             deviceContext = CreateTrackerWithLicense(apiContext, urls[0], licensePath);
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
 
             // Subscribe to gaze data
-            result = Interop.tobii_gaze_point_subscribe(deviceContext, newOnGazePoint);
+            result = Interop.tobii_gaze_data_subscribe(deviceContext, newOnGazePoint);
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
 
             // Get geometry mounting
@@ -120,7 +120,7 @@ namespace EyetrackerButton
         public static void unsubscribe(IntPtr deviceContext, IntPtr apiContext)
         {
             // Cleanup
-            tobii_error_t result = Interop.tobii_gaze_point_unsubscribe(deviceContext);
+            tobii_error_t result = Interop.tobii_gaze_data_unsubscribe(deviceContext);
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
             result = Interop.tobii_device_destroy(deviceContext);
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
@@ -154,7 +154,7 @@ namespace EyetrackerButton
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
 
             // Subscribe to gaze data
-            result = Interop.tobii_gaze_point_subscribe(deviceContext, OnGazePoint);
+            result = Interop.tobii_gaze_data_subscribe(deviceContext, newOnGazePoint);
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
 
             // get geometry mounting
@@ -206,7 +206,7 @@ namespace EyetrackerButton
             }
 
             // Cleanup
-            result = Interop.tobii_gaze_point_unsubscribe(deviceContext);
+            result = Interop.tobii_gaze_data_unsubscribe(deviceContext);
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
             result = Interop.tobii_device_destroy(deviceContext);
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);

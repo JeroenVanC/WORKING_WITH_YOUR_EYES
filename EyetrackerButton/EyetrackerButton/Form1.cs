@@ -47,7 +47,13 @@ namespace EyetrackerButton
             while (true)
             {
                 TobiiTracker.record(connection.Item1);
-                Console.WriteLine($"Gaze point: {TobiiTracker.coordinaat_x}, {TobiiTracker.coordinaat_y}");
+                Console.WriteLine($"Gaze point: {TobiiTracker.coordinaat_left.x},{TobiiTracker.coordinaat_left.y},{TobiiTracker.coordinaat_left.z}, {TobiiTracker.coordinaat_right.x}, {TobiiTracker.coordinaat_right.y}, {TobiiTracker.coordinaat_right.z}");
+
+                var x_coor = (TobiiTracker.coordinaat_left.x + TobiiTracker.coordinaat_right.x) / 2;
+                var y_coor = (TobiiTracker.coordinaat_left.y + TobiiTracker.coordinaat_right.y) / 2;
+                var z_coor = (TobiiTracker.coordinaat_left.z + TobiiTracker.coordinaat_right.z) / 2;
+
+                Console.WriteLine($"Gaze point: {x_coor},{y_coor},{z_coor}");
 
                 // update x-coor label
                 if (lblX_Val.InvokeRequired)
@@ -64,7 +70,7 @@ namespace EyetrackerButton
                 float formHeight = this.Height;
                 float formWidth = this.Width;
 
-                gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * TobiiTracker.coordinaat_x), ((int)(formHeight * TobiiTracker.coordinaat_y))); }));
+                //gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * TobiiTracker.coordinaat_x), ((int)(formHeight * TobiiTracker.coordinaat_y))); }));
 
                 
 
@@ -91,12 +97,6 @@ namespace EyetrackerButton
                 WindowState = FormWindowState.Normal;
                 TopMost = false;
             }
-        }
-
-        private void btnCalibration_Click(object sender, EventArgs e)
-        {
-            Form2 f2 = new Form2();
-            f2.ShowDialog(); // Shows Form2
         }
     }
 }
