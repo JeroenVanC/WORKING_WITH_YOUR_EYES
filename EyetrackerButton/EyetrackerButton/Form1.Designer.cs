@@ -122,7 +122,6 @@ namespace EyetrackerButton
             this.btnCalibration.TabIndex = 8;
             this.btnCalibration.Text = "Personal Calibration";
             this.btnCalibration.UseVisualStyleBackColor = true;
-            this.btnCalibration.Click += new System.EventHandler(this.btnCalibration_Click);
             // 
             // Form1
             // 
