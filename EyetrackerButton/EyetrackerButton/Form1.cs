@@ -95,7 +95,7 @@ namespace EyetrackerButton
 
         private void btnCalibration_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            Form2 f2 = new Form2(connection);
             f2.ShowDialog(); // Shows Form2
         }
     }

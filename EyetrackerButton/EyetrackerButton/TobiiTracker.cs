@@ -128,6 +128,27 @@ namespace EyetrackerButton
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
         }
 
+        public static void calibrateFirst(IntPtr deviceContext, IntPtr apiContext)
+        {
+            tobii_error_t result = Interop.tobii_calibration_start(deviceContext, tobii_enabled_eye_t.TOBII_ENABLED_EYE_BOTH);
+            Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
+
+            //tobii_error_t result = Interop.tobii_notifications_subscribe(deviceContext, );
+            //Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
+
+
+            float cal_x = (float)0.5;
+            float cal_y = (float)0.5;
+            result = Interop.tobii_calibration_collect_data_2d(deviceContext, cal_x, cal_y);
+            Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
+
+            result = Interop.tobii_calibration_compute_and_apply(deviceContext);
+            Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
+
+            result = Interop.tobii_calibration_stop(deviceContext);
+            Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
+        }
+
         public void gettingStarted()
         {
             // Create API context
@@ -146,7 +167,12 @@ namespace EyetrackerButton
             }
 
             // Connect to the first tracker found
-            string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\tobii\se_license_key";
+            // path jonas:
+            //string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\tobii\se_license_key";
+            // path jeroen:
+            string licensePath = @"C:\masterproef\code\EyetrackerButton\EyetrackerButton\tobii\se_license_key";
+            
+            
             IntPtr deviceContext;
             deviceContext = CreateTrackerWithLicense(apiContext, urls[0], licensePath);
             //result = Interop.tobii_device_create(apiContext, urls[0], Interop.tobii_field_of_use_t.TOBII_FIELD_OF_USE_STORE_OR_TRANSFER_FALSE, out deviceContext);
