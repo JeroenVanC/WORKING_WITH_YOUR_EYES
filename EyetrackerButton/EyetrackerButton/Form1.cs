@@ -92,5 +92,14 @@ namespace EyetrackerButton
                 TopMost = false;
             }
         }
+<<<<<<< HEAD
+
+        private void btnCalibration_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2(connection);
+            f2.ShowDialog(); // Shows Form2
+        }
+=======
+>>>>>>> cd30b3dc2c5dea678696081f1654dee5cf4061af
     }
 }

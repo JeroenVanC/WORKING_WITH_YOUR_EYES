@@ -20,3 +20,5 @@ C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerBu
 C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.csproj.CoreCompileInputs.cache
 C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.exe
 C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.pdb
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.csproj.AssemblyReference.cache
+C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.Form2.resources
