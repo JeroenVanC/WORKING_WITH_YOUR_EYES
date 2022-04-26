@@ -22,3 +22,4 @@ C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerBu
 C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.pdb
 C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.csproj.AssemblyReference.cache
 C:\masterproef\code\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.Form2.resources
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\obj\x64\Debug\EyetrackerButton.Form2.resources
