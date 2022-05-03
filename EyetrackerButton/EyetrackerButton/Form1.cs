@@ -26,6 +26,7 @@ namespace EyetrackerButton
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = FormBorderStyle.None;
+            DoubleBuffered = true;
 
             thread = new Thread(new ThreadStart(recording));
 
@@ -91,8 +92,8 @@ namespace EyetrackerButton
                 float formHeight = this.Height;
                 float formWidth = this.Width;
 
-                gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * TobiiTracker.coordinaat_x), ((int)(formHeight * TobiiTracker.coordinaat_y))); }));
-                gazeBoxAvg.Invoke(new MethodInvoker(delegate { gazeBoxAvg.Location = new Point((int)(formWidth * xMovingAverage), ((int)(formHeight * yMovingAverage))); }));
+                gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * TobiiTracker.coordinaat_x - gazeBox.Width / 2), ((int)(formHeight * TobiiTracker.coordinaat_y - gazeBox.Height / 2))); }));
+                gazeBoxAvg.Invoke(new MethodInvoker(delegate { gazeBoxAvg.Location = new Point((int)(formWidth * xMovingAverage - gazeBoxAvg.Width / 2), ((int)(formHeight * yMovingAverage - gazeBoxAvg.Height / 2))); }));
 
 
 
@@ -111,13 +112,14 @@ namespace EyetrackerButton
 
             float formHeight = this.Height;
             float formWidth = this.Width;
+
             var a = 0.025;
             var b = 0.975;
-            testbox1.Location = new Point((int)(formWidth * 0.5), ((int)(formHeight * 0.5)));
-            testbox2.Location = new Point((int)(formWidth * a), ((int)(formHeight * a)));
-            testbox3.Location = new Point((int)(formWidth * a), ((int)(formHeight * b)));
-            testbox4.Location = new Point((int)(formWidth * b), ((int)(formHeight * b)));
-            testbox5.Location = new Point((int)(formWidth * b), ((int)(formHeight * a)));
+            testbox1.Location = new Point((int)(formWidth * 0.5 - testbox1.Width / 2), ((int)(formHeight * 0.5 - testbox1.Height / 2)));
+            testbox2.Location = new Point((int)(formWidth * a - testbox2.Width / 2), ((int)(formHeight * a - testbox2.Height / 2)));
+            testbox3.Location = new Point((int)(formWidth * a - testbox3.Width / 2), ((int)(formHeight * b - testbox3.Height / 2)));
+            testbox4.Location = new Point((int)(formWidth * b - testbox4.Width / 2), ((int)(formHeight * b - testbox4.Height / 2)));
+            testbox5.Location = new Point((int)(formWidth * b - testbox5.Width / 2), ((int)(formHeight * a - testbox5.Height / 2)));
             connection = TobiiTracker.subscribe();
 
             lookBtn.Location = new Point((int)(formWidth * 0.75), ((int)(formHeight * 0.75)));
