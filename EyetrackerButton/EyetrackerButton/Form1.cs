@@ -20,7 +20,13 @@ namespace EyetrackerButton
         public Thread thread;
         public Tuple<IntPtr, IntPtr> connection;
 
-       
+        // button state variableen
+        public bool btnActiveState = false;
+
+        public long beginTime = 0;
+        public long activeTime = 0;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -44,6 +50,14 @@ namespace EyetrackerButton
         public void recording()
         {
 
+            // rooie vierkant
+            MovingAverage xAverageGaze = new MovingAverage(10);
+            MovingAverage yAverageGaze = new MovingAverage(10);
+
+            float xGaze;
+            float yGaze;
+
+            // blauwe vierkant
             MovingAverage xAverage = new MovingAverage(150);
             MovingAverage yAverage = new MovingAverage(150);
 
@@ -53,8 +67,13 @@ namespace EyetrackerButton
             while (true)
             {
                 TobiiTracker.record(connection.Item1);
-                Console.WriteLine($"Gaze point: {TobiiTracker.coordinaat_x}, {TobiiTracker.coordinaat_y}");
+                //Console.WriteLine($"Gaze point: {TobiiTracker.coordinaat_x}, {TobiiTracker.coordinaat_y}");
 
+                // rooie vierkant
+                xGaze = xAverageGaze.Next(TobiiTracker.coordinaat_x);
+                yGaze = yAverageGaze.Next(TobiiTracker.coordinaat_y);
+
+                // blauwe vierkant
                 xMovingAverage = xAverage.Next(TobiiTracker.coordinaat_x);
                 yMovingAverage = yAverage.Next(TobiiTracker.coordinaat_y);
 
@@ -91,12 +110,60 @@ namespace EyetrackerButton
                 float formHeight = this.Height;
                 float formWidth = this.Width;
 
-                gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * TobiiTracker.coordinaat_x), ((int)(formHeight * TobiiTracker.coordinaat_y))); }));
+                gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * xGaze), ((int)(formHeight * yGaze))); }));
                 gazeBoxAvg.Invoke(new MethodInvoker(delegate { gazeBoxAvg.Location = new Point((int)(formWidth * xMovingAverage), ((int)(formHeight * yMovingAverage))); }));
 
+                bool btnActive;
+                btnActive = checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp);
 
 
             }
+        }
+
+        public bool checkIfBtnActive(float xGaze, float yGaze, float xMovingAverage, float yMovingAverage, long timestamp)
+        {
+            int btnSizeX_left = (int)(this.Width * 0.75);
+            int btnSizeY_top = (int)(this.Height * 0.75);
+            int btnSizeX_right = (int)((this.Width * 0.75) +  150);
+            int btnSizeY_bottem = (int)((this.Height * 0.75) + 150);
+
+            int xGazePixel = (int)(this.Width * xGaze);
+            int yGazePixel = (int)(this.Height * yGaze);
+
+            int xMovingAvgPixel = (int)(this.Width * xMovingAverage);
+            int yMovingAvgPixel = (int)(this.Height * yMovingAverage);
+
+
+
+            if (btnSizeX_left < xGazePixel && xGazePixel < btnSizeX_right && btnSizeY_top < yGazePixel && yGazePixel < btnSizeY_bottem)
+            {
+                if (btnActiveState ==  true)
+                {
+                    activeTime = timestamp - beginTime;
+                    Console.WriteLine(activeTime/1000000);
+                    if (activeTime > 5000000)
+                    {
+                        lookBtn.BackColor = Color.Green;
+                    }
+                }
+                else
+                {
+                    beginTime = timestamp;
+                    btnActiveState = true;
+                }
+            } else if(btnSizeX_left < xMovingAvgPixel && xMovingAvgPixel < btnSizeX_right && btnSizeY_top < yMovingAvgPixel && yMovingAvgPixel < btnSizeY_bottem)
+            {
+                btnActiveState = true;
+                Console.WriteLine("blauw er nog in");
+            } else
+            {
+                lookBtn.BackColor = Color.Yellow;
+                btnActiveState = false;
+            }
+
+
+
+            return true;
         }
 
         public void btnDisconnect_Click(object sender, EventArgs e)
