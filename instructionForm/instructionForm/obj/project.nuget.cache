@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/CkG+q51RhIy7NkdxbJ6F7Gt0olZ7mq/4famdG2ddIvBLZUtVGJd4V4GbFoZHaO1VuutsG7VzYpm8O5ouxhH8g==",
+  "success": true,
+  "projectFilePath": "C:\\masterproef\\code\\instructionForm\\instructionForm\\instructionForm.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jeroe\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
