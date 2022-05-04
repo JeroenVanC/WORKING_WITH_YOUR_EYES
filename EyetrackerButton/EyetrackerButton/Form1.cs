@@ -162,8 +162,6 @@ namespace EyetrackerButton
                 btnActiveState = false;
             }
 
-
-
             return true;
         }
 

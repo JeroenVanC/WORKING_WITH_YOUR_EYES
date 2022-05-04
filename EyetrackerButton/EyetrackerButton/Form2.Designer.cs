@@ -29,7 +29,6 @@ namespace EyetrackerButton
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pictBoxCal1 = new System.Windows.Forms.PictureBox();
             this.btnStartCal = new System.Windows.Forms.Button();
             this.btnStopCal = new System.Windows.Forms.Button();
@@ -37,7 +36,6 @@ namespace EyetrackerButton
             this.pictBoxCal3 = new System.Windows.Forms.PictureBox();
             this.pictBoxCal4 = new System.Windows.Forms.PictureBox();
             this.pictBoxCal5 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxCal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxCal2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxCal3)).BeginInit();
@@ -115,11 +113,6 @@ namespace EyetrackerButton
             this.pictBoxCal5.TabStop = false;
             this.pictBoxCal5.Click += new System.EventHandler(this.pictBoxCal5_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +146,5 @@ namespace EyetrackerButton
         private System.Windows.Forms.PictureBox pictBoxCal3;
         private System.Windows.Forms.PictureBox pictBoxCal4;
         private System.Windows.Forms.PictureBox pictBoxCal5;
-        private System.Windows.Forms.Timer timer1;
     }
 }
