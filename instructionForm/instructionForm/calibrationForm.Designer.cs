@@ -30,6 +30,8 @@ namespace instructionForm
         private void InitializeComponent()
         {
             this.btnStartCal = new System.Windows.Forms.Button();
+            this.pictBoxCal1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictBoxCal1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStartCal
@@ -49,16 +51,26 @@ namespace instructionForm
             this.btnStartCal.UseVisualStyleBackColor = true;
             this.btnStartCal.Click += new System.EventHandler(this.btnStartCal_Click);
             // 
+            // pictBoxCal1
+            // 
+            this.pictBoxCal1.Location = new System.Drawing.Point(382, 271);
+            this.pictBoxCal1.Name = "pictBoxCal1";
+            this.pictBoxCal1.Size = new System.Drawing.Size(100, 50);
+            this.pictBoxCal1.TabIndex = 2;
+            this.pictBoxCal1.TabStop = false;
+            // 
             // calibrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1171, 637);
+            this.Controls.Add(this.pictBoxCal1);
             this.Controls.Add(this.btnStartCal);
             this.Name = "calibrationForm";
             this.Text = "calibrationForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictBoxCal1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -66,5 +78,6 @@ namespace instructionForm
         #endregion
 
         private System.Windows.Forms.Button btnStartCal;
+        private System.Windows.Forms.PictureBox pictBoxCal1;
     }
 }

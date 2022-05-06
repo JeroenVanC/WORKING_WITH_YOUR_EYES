@@ -47,10 +47,10 @@ namespace EyetrackerButton
             // 
             this.pictBoxCal1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictBoxCal1.BackColor = System.Drawing.Color.Transparent;
-            this.pictBoxCal1.Location = new System.Drawing.Point(902, 327);
+            this.pictBoxCal1.Location = new System.Drawing.Point(479, 30);
             this.pictBoxCal1.Margin = new System.Windows.Forms.Padding(2);
             this.pictBoxCal1.Name = "pictBoxCal1";
-            this.pictBoxCal1.Size = new System.Drawing.Size(15, 15);
+            this.pictBoxCal1.Size = new System.Drawing.Size(150, 150);
             this.pictBoxCal1.TabIndex = 0;
             this.pictBoxCal1.TabStop = false;
             this.pictBoxCal1.Click += new System.EventHandler(this.pictBoxCalibration_Click);
@@ -78,9 +78,9 @@ namespace EyetrackerButton
             // pictBoxCal2
             // 
             this.pictBoxCal2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictBoxCal2.Location = new System.Drawing.Point(166, 129);
+            this.pictBoxCal2.Location = new System.Drawing.Point(479, 30);
             this.pictBoxCal2.Name = "pictBoxCal2";
-            this.pictBoxCal2.Size = new System.Drawing.Size(15, 15);
+            this.pictBoxCal2.Size = new System.Drawing.Size(150, 150);
             this.pictBoxCal2.TabIndex = 3;
             this.pictBoxCal2.TabStop = false;
             this.pictBoxCal2.Click += new System.EventHandler(this.pictBoxCal2_Click);
@@ -88,27 +88,27 @@ namespace EyetrackerButton
             // pictBoxCal3
             // 
             this.pictBoxCal3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictBoxCal3.Location = new System.Drawing.Point(586, 411);
+            this.pictBoxCal3.Location = new System.Drawing.Point(479, 30);
             this.pictBoxCal3.Name = "pictBoxCal3";
-            this.pictBoxCal3.Size = new System.Drawing.Size(15, 15);
+            this.pictBoxCal3.Size = new System.Drawing.Size(150, 150);
             this.pictBoxCal3.TabIndex = 4;
             this.pictBoxCal3.TabStop = false;
             this.pictBoxCal3.Click += new System.EventHandler(this.pictBoxCal3_Click);
             // 
             // pictBoxCal4
             // 
-            this.pictBoxCal4.Location = new System.Drawing.Point(654, 268);
+            this.pictBoxCal4.Location = new System.Drawing.Point(479, 30);
             this.pictBoxCal4.Name = "pictBoxCal4";
-            this.pictBoxCal4.Size = new System.Drawing.Size(15, 15);
+            this.pictBoxCal4.Size = new System.Drawing.Size(150, 150);
             this.pictBoxCal4.TabIndex = 5;
             this.pictBoxCal4.TabStop = false;
             this.pictBoxCal4.Click += new System.EventHandler(this.pictBoxCal4_Click);
             // 
             // pictBoxCal5
             // 
-            this.pictBoxCal5.Location = new System.Drawing.Point(890, 478);
+            this.pictBoxCal5.Location = new System.Drawing.Point(479, 30);
             this.pictBoxCal5.Name = "pictBoxCal5";
-            this.pictBoxCal5.Size = new System.Drawing.Size(15, 15);
+            this.pictBoxCal5.Size = new System.Drawing.Size(150, 150);
             this.pictBoxCal5.TabIndex = 6;
             this.pictBoxCal5.TabStop = false;
             this.pictBoxCal5.Click += new System.EventHandler(this.pictBoxCal5_Click);
