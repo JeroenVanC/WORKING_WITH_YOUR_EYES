@@ -39,7 +39,7 @@ namespace instructionForm
         private void btnCalibr_Click(object sender, EventArgs e)
         {
             
-            calibrationForm calibrationForm = new calibrationForm();
+            calibrationForm calibrationForm = new calibrationForm(connection);
             calibrationForm.ShowDialog(); // Shows Form2
             
         }
@@ -117,7 +117,7 @@ namespace instructionForm
                 float formHeight = this.Height;
                 float formWidth = this.Width;
 
-                //gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * xGaze), ((int)(formHeight * yGaze))); }));
+                gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * TobiiTracker.coordinaat_x - gazeBox.Width / 2), ((int)(formHeight * TobiiTracker.coordinaat_y - gazeBox.Height / 2))); }));
                 //gazeBoxAvg.Invoke(new MethodInvoker(delegate { gazeBoxAvg.Location = new Point((int)(formWidth * xMovingAverage), ((int)(formHeight * yMovingAverage))); }));
 
                 //bool btnActive;

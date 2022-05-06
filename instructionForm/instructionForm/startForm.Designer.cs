@@ -39,7 +39,9 @@ namespace instructionForm
             this.btnCalibr = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
             this.panelGazeDir = new System.Windows.Forms.Panel();
+            this.gazeBox = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -172,23 +174,32 @@ namespace instructionForm
             this.panelGazeDir.TabIndex = 2;
             this.panelGazeDir.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // gazeBox
+            // 
+            this.gazeBox.BackColor = System.Drawing.Color.LightGreen;
+            this.gazeBox.Location = new System.Drawing.Point(595, 276);
+            this.gazeBox.Name = "gazeBox";
+            this.gazeBox.Size = new System.Drawing.Size(25, 25);
+            this.gazeBox.TabIndex = 3;
+            this.gazeBox.TabStop = false;
+            // 
             // startForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1061, 605);
+            this.Controls.Add(this.gazeBox);
             this.Controls.Add(this.panelGazeDir);
             this.Controls.Add(this.panel1);
             this.Name = "startForm";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.startForm_KeyDown);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.startForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.startForm_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,6 +216,7 @@ namespace instructionForm
         private System.Windows.Forms.Button btnCalibr;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Panel panelGazeDir;
+        private System.Windows.Forms.PictureBox gazeBox;
     }
 }
 
