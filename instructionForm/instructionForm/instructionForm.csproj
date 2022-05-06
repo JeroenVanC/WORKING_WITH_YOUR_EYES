@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="tobii\lib\tobii\tobii_stream_engine.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

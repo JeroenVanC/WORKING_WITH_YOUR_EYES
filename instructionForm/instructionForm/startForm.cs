@@ -32,7 +32,13 @@ namespace instructionForm
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = FormBorderStyle.None;
 
-            thread = new Thread(new ThreadStart(recording));
+           
+        }
+
+        private void btnRecord_Click(object sender, EventArgs e)
+        {
+            thread.Start();
+
         }
 
 
@@ -65,7 +71,7 @@ namespace instructionForm
         private void btnConnect_Click(object sender, EventArgs e)
         {
             // connection.Item1 =  deviceContext & connection.Item2 = apiContext
-
+            thread = new Thread(new ThreadStart(recording));
             connection = TobiiTracker.subscribe();
 
         }
@@ -127,11 +133,7 @@ namespace instructionForm
             }
         }
 
-        private void btnRecord_Click(object sender, EventArgs e)
-        {
-            thread.Start();
-
-        }
+        
 
         private void btnDiscon_Click(object sender, EventArgs e)
         {
