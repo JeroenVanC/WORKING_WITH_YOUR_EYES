@@ -47,6 +47,7 @@ namespace instructionForm
             this.btnStartCal.TabIndex = 1;
             this.btnStartCal.Text = "START CALIBRATION";
             this.btnStartCal.UseVisualStyleBackColor = true;
+            this.btnStartCal.Click += new System.EventHandler(this.btnStartCal_Click);
             // 
             // calibrationForm
             // 

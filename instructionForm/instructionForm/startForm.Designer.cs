@@ -113,6 +113,7 @@ namespace instructionForm
             this.btnDiscon.TabIndex = 3;
             this.btnDiscon.Text = "DISCONNECT";
             this.btnDiscon.UseVisualStyleBackColor = true;
+            this.btnDiscon.Click += new System.EventHandler(this.btnDiscon_Click);
             // 
             // btnRecord
             // 
@@ -128,6 +129,7 @@ namespace instructionForm
             this.btnRecord.TabIndex = 2;
             this.btnRecord.Text = "START RECORDING";
             this.btnRecord.UseVisualStyleBackColor = true;
+            this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
             // 
             // btnCalibr
             // 
@@ -159,6 +161,7 @@ namespace instructionForm
             this.btnConnect.TabIndex = 0;
             this.btnConnect.Text = "CONNECT";
             this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // panelGazeDir
             // 
@@ -181,6 +184,7 @@ namespace instructionForm
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.startForm_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.startForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.startForm_MouseMove);
             this.panel1.ResumeLayout(false);

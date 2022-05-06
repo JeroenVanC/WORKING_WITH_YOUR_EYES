@@ -6,7 +6,7 @@ using Tobii.StreamEngine;
 using System.IO;
 using System.Diagnostics;
 
-namespace EyetrackerButton
+namespace instructionForm
 {
     public class TobiiTracker
     {
@@ -90,9 +90,9 @@ namespace EyetrackerButton
             }
 
             // path jonas:
-            //string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\EyetrackerButton\EyetrackerButton\tobii\se_license_key";
+            //string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\instructionForm\instructionForm\tobii\se_license_key";
             // path jeroen:
-            string licensePath = @"C:\masterproef\code\EyetrackerButton\EyetrackerButton\tobii\se_license_key";
+            string licensePath = @"C:\masterproef\code\instructionForm\instructionForm\tobii\se_license_key";
             IntPtr deviceContext;
             deviceContext = CreateTrackerWithLicense(apiContext, urls[0], licensePath);
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
