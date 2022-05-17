@@ -1,5 +1,4 @@
-﻿
-namespace instructionForm
+﻿namespace WorkingWithYourEyes
 {
     partial class calibrationForm
     {
@@ -50,59 +49,59 @@ namespace instructionForm
             this.btnStartCal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartCal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnStartCal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStartCal.Location = new System.Drawing.Point(522, 47);
+            this.btnStartCal.Location = new System.Drawing.Point(513, 73);
             this.btnStartCal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStartCal.MaximumSize = new System.Drawing.Size(229, 107);
             this.btnStartCal.Name = "btnStartCal";
             this.btnStartCal.Size = new System.Drawing.Size(229, 107);
-            this.btnStartCal.TabIndex = 1;
+            this.btnStartCal.TabIndex = 2;
             this.btnStartCal.Text = "START CALIBRATION";
             this.btnStartCal.UseVisualStyleBackColor = true;
             this.btnStartCal.Click += new System.EventHandler(this.btnStartCal_Click);
             // 
             // pictBoxCal1
             // 
-            this.pictBoxCal1.Location = new System.Drawing.Point(437, 361);
+            this.pictBoxCal1.Location = new System.Drawing.Point(586, 324);
             this.pictBoxCal1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictBoxCal1.Name = "pictBoxCal1";
             this.pictBoxCal1.Size = new System.Drawing.Size(171, 200);
-            this.pictBoxCal1.TabIndex = 2;
+            this.pictBoxCal1.TabIndex = 3;
             this.pictBoxCal1.TabStop = false;
             // 
             // pictBoxCal2
             // 
-            this.pictBoxCal2.Location = new System.Drawing.Point(611, 391);
+            this.pictBoxCal2.Location = new System.Drawing.Point(594, 332);
             this.pictBoxCal2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictBoxCal2.Name = "pictBoxCal2";
             this.pictBoxCal2.Size = new System.Drawing.Size(171, 200);
-            this.pictBoxCal2.TabIndex = 3;
+            this.pictBoxCal2.TabIndex = 4;
             this.pictBoxCal2.TabStop = false;
             // 
             // pictBoxCal3
             // 
-            this.pictBoxCal3.Location = new System.Drawing.Point(806, 436);
+            this.pictBoxCal3.Location = new System.Drawing.Point(602, 340);
             this.pictBoxCal3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictBoxCal3.Name = "pictBoxCal3";
             this.pictBoxCal3.Size = new System.Drawing.Size(171, 200);
-            this.pictBoxCal3.TabIndex = 4;
+            this.pictBoxCal3.TabIndex = 5;
             this.pictBoxCal3.TabStop = false;
             // 
             // pictBoxCal4
             // 
-            this.pictBoxCal4.Location = new System.Drawing.Point(581, 552);
+            this.pictBoxCal4.Location = new System.Drawing.Point(610, 348);
             this.pictBoxCal4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictBoxCal4.Name = "pictBoxCal4";
             this.pictBoxCal4.Size = new System.Drawing.Size(171, 200);
-            this.pictBoxCal4.TabIndex = 5;
+            this.pictBoxCal4.TabIndex = 6;
             this.pictBoxCal4.TabStop = false;
             // 
             // pictBoxCal5
             // 
-            this.pictBoxCal5.Location = new System.Drawing.Point(758, 568);
+            this.pictBoxCal5.Location = new System.Drawing.Point(618, 356);
             this.pictBoxCal5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictBoxCal5.Name = "pictBoxCal5";
             this.pictBoxCal5.Size = new System.Drawing.Size(171, 200);
-            this.pictBoxCal5.TabIndex = 6;
+            this.pictBoxCal5.TabIndex = 7;
             this.pictBoxCal5.TabStop = false;
             // 
             // calibrationForm
@@ -110,17 +109,15 @@ namespace instructionForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1338, 849);
+            this.ClientSize = new System.Drawing.Size(1342, 848);
             this.Controls.Add(this.pictBoxCal5);
             this.Controls.Add(this.pictBoxCal4);
             this.Controls.Add(this.pictBoxCal3);
             this.Controls.Add(this.pictBoxCal2);
             this.Controls.Add(this.pictBoxCal1);
             this.Controls.Add(this.btnStartCal);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "calibrationForm";
             this.Text = "calibrationForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxCal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxCal2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBoxCal3)).EndInit();
@@ -132,11 +129,11 @@ namespace instructionForm
 
         #endregion
 
-        private System.Windows.Forms.Button btnStartCal;
-        private System.Windows.Forms.PictureBox pictBoxCal1;
-        private System.Windows.Forms.PictureBox pictBoxCal2;
-        private System.Windows.Forms.PictureBox pictBoxCal3;
-        private System.Windows.Forms.PictureBox pictBoxCal4;
-        private System.Windows.Forms.PictureBox pictBoxCal5;
+        private Button btnStartCal;
+        private PictureBox pictBoxCal1;
+        private PictureBox pictBoxCal2;
+        private PictureBox pictBoxCal3;
+        private PictureBox pictBoxCal4;
+        private PictureBox pictBoxCal5;
     }
 }
