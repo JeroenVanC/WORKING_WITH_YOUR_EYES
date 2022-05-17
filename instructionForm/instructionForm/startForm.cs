@@ -47,6 +47,9 @@ namespace instructionForm
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = FormBorderStyle.None;
+            this.KeyPreview = true;
+            gazeBox.BackColor = Color.Transparent;
+            gazeBox.BringToFront();
 
            
         }
@@ -67,23 +70,6 @@ namespace instructionForm
             
         }
 
-        private void startForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            panelGazeDir.Location = new Point(e.X - panelGazeDir.Width / 2, e.Y - panelGazeDir.Height / 2);
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            int x = panelGazeDir.Width  / 2;
-            int y = panelGazeDir.Height / 2;
-            int width = 20;
-            int height = 20;
-
-            Pen pen = new Pen(Color.DarkBlue, 3);
-            e.Graphics.DrawEllipse(pen, x - width / 2, y - height / 2, width, height);
-
-            e.Graphics.Dispose();
-        }
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
@@ -137,8 +123,6 @@ namespace instructionForm
 
             //}
         }
-
-        
 
         private void btnDiscon_Click(object sender, EventArgs e)
         {

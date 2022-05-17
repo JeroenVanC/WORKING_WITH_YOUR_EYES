@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jonas\\SynologyDrive\\GIT\\WORKING_WITH_YOUR_EYES\\instructionForm\\instructionForm\\instructionForm.csproj": {}
+    "C:\\masterproef\\code\\instructionForm\\instructionForm\\instructionForm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jonas\\SynologyDrive\\GIT\\WORKING_WITH_YOUR_EYES\\instructionForm\\instructionForm\\instructionForm.csproj": {
+    "C:\\masterproef\\code\\instructionForm\\instructionForm\\instructionForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jonas\\SynologyDrive\\GIT\\WORKING_WITH_YOUR_EYES\\instructionForm\\instructionForm\\instructionForm.csproj",
+        "projectUniqueName": "C:\\masterproef\\code\\instructionForm\\instructionForm\\instructionForm.csproj",
         "projectName": "instructionForm",
-        "projectPath": "C:\\Users\\jonas\\SynologyDrive\\GIT\\WORKING_WITH_YOUR_EYES\\instructionForm\\instructionForm\\instructionForm.csproj",
-        "packagesPath": "C:\\Users\\jonas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jonas\\SynologyDrive\\GIT\\WORKING_WITH_YOUR_EYES\\instructionForm\\instructionForm\\obj\\",
+        "projectPath": "C:\\masterproef\\code\\instructionForm\\instructionForm\\instructionForm.csproj",
+        "packagesPath": "C:\\Users\\jeroe\\.nuget\\packages\\",
+        "outputPath": "C:\\masterproef\\code\\instructionForm\\instructionForm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jonas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jeroe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,12 +49,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.13, 5.0.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -63,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

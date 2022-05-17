@@ -29,6 +29,7 @@ namespace instructionForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(startForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblYCoData = new System.Windows.Forms.Label();
             this.lblXCoData = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@ namespace instructionForm
             this.btnRecord = new System.Windows.Forms.Button();
             this.btnCalibr = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
-            this.panelGazeDir = new System.Windows.Forms.Panel();
             this.gazeBox = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).BeginInit();
@@ -165,19 +165,11 @@ namespace instructionForm
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
-            // panelGazeDir
-            // 
-            this.panelGazeDir.BackColor = System.Drawing.Color.Transparent;
-            this.panelGazeDir.Location = new System.Drawing.Point(475, 201);
-            this.panelGazeDir.Name = "panelGazeDir";
-            this.panelGazeDir.Size = new System.Drawing.Size(20, 20);
-            this.panelGazeDir.TabIndex = 2;
-            this.panelGazeDir.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
             // gazeBox
             // 
-            this.gazeBox.BackColor = System.Drawing.Color.LightGreen;
-            this.gazeBox.Location = new System.Drawing.Point(595, 276);
+            this.gazeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.gazeBox.Image = ((System.Drawing.Image)(resources.GetObject("gazeBox.Image")));
+            this.gazeBox.Location = new System.Drawing.Point(589, 276);
             this.gazeBox.Name = "gazeBox";
             this.gazeBox.Size = new System.Drawing.Size(25, 25);
             this.gazeBox.TabIndex = 3;
@@ -190,13 +182,11 @@ namespace instructionForm
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1061, 605);
             this.Controls.Add(this.gazeBox);
-            this.Controls.Add(this.panelGazeDir);
             this.Controls.Add(this.panel1);
             this.Name = "startForm";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.startForm_KeyDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.startForm_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).EndInit();
@@ -215,7 +205,6 @@ namespace instructionForm
         private System.Windows.Forms.Button btnRecord;
         private System.Windows.Forms.Button btnCalibr;
         private System.Windows.Forms.Button btnConnect;
-        private System.Windows.Forms.Panel panelGazeDir;
         private System.Windows.Forms.PictureBox gazeBox;
     }
 }
