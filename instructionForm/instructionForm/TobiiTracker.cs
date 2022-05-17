@@ -90,9 +90,9 @@ namespace instructionForm
             }
 
             // path jonas:
-            //string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\instructionForm\instructionForm\tobii\se_license_key";
+            string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\instructionForm\instructionForm\tobii\se_license_key";
             // path jeroen:
-            string licensePath = @"C:\masterproef\code\instructionForm\instructionForm\tobii\se_license_key";
+            //string licensePath = @"C:\masterproef\code\instructionForm\instructionForm\tobii\se_license_key";
             IntPtr deviceContext;
             deviceContext = CreateTrackerWithLicense(apiContext, urls[0], licensePath);
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);

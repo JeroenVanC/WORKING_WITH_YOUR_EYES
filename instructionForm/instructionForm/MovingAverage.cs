@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace instructionForm
 {
-    internal class MovingAverage
+    public class MovingAverage
     {
 
         public int M;

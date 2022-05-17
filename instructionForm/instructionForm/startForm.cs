@@ -26,6 +26,22 @@ namespace instructionForm
         public long beginTime = 0;
         public long activeTime = 0;
 
+        // rooie vierkant
+        public MovingAverage xAverageGaze = new MovingAverage(10);
+        public MovingAverage yAverageGaze = new MovingAverage(10);
+
+        public float xGaze;
+        public float yGaze;
+
+        // blauwe vierkant
+        public MovingAverage xAverage = new MovingAverage(150);
+        public MovingAverage yAverage = new MovingAverage(150);
+
+        public float xMovingAverage;
+        public float yMovingAverage;
+
+        private System.Threading.Timer timer1;
+
         public startForm()
         {
             InitializeComponent();
@@ -37,7 +53,8 @@ namespace instructionForm
 
         private void btnRecord_Click(object sender, EventArgs e)
         {
-            thread.Start();
+            //thread.Start();
+            timer1 = new System.Threading.Timer(new TimerCallback(recording), null, 250, 5);
 
         }
 
@@ -71,30 +88,18 @@ namespace instructionForm
         private void btnConnect_Click(object sender, EventArgs e)
         {
             // connection.Item1 =  deviceContext & connection.Item2 = apiContext
-            thread = new Thread(new ThreadStart(recording));
+            //thread = new Thread(new ThreadStart(recording));
             connection = TobiiTracker.subscribe();
 
         }
 
-        public void recording()
+        public void recording(object msg)
         {
 
-            // rooie vierkant
-            MovingAverage xAverageGaze = new MovingAverage(10);
-            MovingAverage yAverageGaze = new MovingAverage(10);
+            
 
-            float xGaze;
-            float yGaze;
-
-            // blauwe vierkant
-            MovingAverage xAverage = new MovingAverage(150);
-            MovingAverage yAverage = new MovingAverage(150);
-
-            float xMovingAverage;
-            float yMovingAverage;
-
-            while (true)
-            {
+            //while (true)
+            //{
                 TobiiTracker.record(connection.Item1);
                 //Console.WriteLine($"Gaze point: {TobiiTracker.coordinaat_x}, {TobiiTracker.coordinaat_y}");
 
@@ -130,14 +135,15 @@ namespace instructionForm
                 //btnActive = checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp);
 
 
-            }
+            //}
         }
 
         
 
         private void btnDiscon_Click(object sender, EventArgs e)
         {
-            thread.Abort();
+            //thread.Abort();
+            timer1.Change(Timeout.Infinite, Timeout.Infinite);
             TobiiTracker.unsubscribe(connection.Item1, connection.Item2);
         }
 
