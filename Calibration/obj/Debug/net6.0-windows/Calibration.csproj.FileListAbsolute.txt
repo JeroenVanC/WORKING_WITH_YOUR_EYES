@@ -1,0 +1,17 @@
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\bin\Debug\net6.0-windows\Calibration.exe
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\bin\Debug\net6.0-windows\Calibration.deps.json
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\bin\Debug\net6.0-windows\Calibration.runtimeconfig.json
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\bin\Debug\net6.0-windows\Calibration.dll
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\bin\Debug\net6.0-windows\Calibration.pdb
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.csproj.AssemblyReference.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.CalibrationStartForm.resources
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.csproj.GenerateResource.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.AssemblyInfoInputs.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.AssemblyInfo.cs
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.csproj.CoreCompileInputs.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.dll
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\refint\Calibration.dll
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.pdb
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.genruntimeconfig.cache
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\ref\Calibration.dll
