@@ -15,3 +15,4 @@ C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\ne
 C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.pdb
 C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.genruntimeconfig.cache
 C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\ref\Calibration.dll
+C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\obj\Debug\net6.0-windows\Calibration.calibrationForm.resources

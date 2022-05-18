@@ -91,7 +91,7 @@ namespace Calibration
             }
 
             // path jonas:
-            string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\instructionForm\instructionForm\tobii\se_license_key";
+            string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\tobii\se_license_key";
             // path jeroen:
             //string licensePath = @"C:\masterproef\code\instructionForm\instructionForm\tobii\se_license_key";
             IntPtr deviceContext;
