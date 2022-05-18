@@ -39,3 +39,4 @@ C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\instructionForm\instruct
 C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\instructionForm\instructionForm\obj\x64\Debug\net5.0-windows\instructionForm.pdb
 C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\instructionForm\instructionForm\obj\x64\Debug\net5.0-windows\instructionForm.genruntimeconfig.cache
 C:\masterproef\code\instructionForm\instructionForm\obj\x64\Debug\net5.0-windows\instructionForm.Properties.Resources.resources
+C:\masterproef\code\instructionForm\instructionForm\obj\x64\Debug\net5.0-windows\instructionForm.DemoForm.resources

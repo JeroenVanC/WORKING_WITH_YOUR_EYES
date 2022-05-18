@@ -30,134 +30,25 @@ namespace instructionForm
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(startForm));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblYCoData = new System.Windows.Forms.Label();
-            this.lblXCoData = new System.Windows.Forms.Label();
-            this.lblYCo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnDiscon = new System.Windows.Forms.Button();
-            this.btnRecord = new System.Windows.Forms.Button();
-            this.btnCalibr = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
             this.gazeBox = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.btnCalibr = new System.Windows.Forms.Button();
+            this.btnRecord = new System.Windows.Forms.Button();
+            this.btnDiscon = new System.Windows.Forms.Button();
+            this.lblTitle1 = new System.Windows.Forms.Label();
+            this.lblTitle2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.lblYCoData);
-            this.panel1.Controls.Add(this.lblXCoData);
-            this.panel1.Controls.Add(this.lblYCo);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnDiscon);
-            this.panel1.Controls.Add(this.btnRecord);
-            this.panel1.Controls.Add(this.btnCalibr);
-            this.panel1.Controls.Add(this.btnConnect);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 605);
-            this.panel1.TabIndex = 1;
-            // 
-            // lblYCoData
-            // 
-            this.lblYCoData.AutoSize = true;
-            this.lblYCoData.Location = new System.Drawing.Point(12, 301);
-            this.lblYCoData.Name = "lblYCoData";
-            this.lblYCoData.Size = new System.Drawing.Size(38, 15);
-            this.lblYCoData.TabIndex = 7;
-            this.lblYCoData.Text = "label2";
-            // 
-            // lblXCoData
-            // 
-            this.lblXCoData.AutoSize = true;
-            this.lblXCoData.Location = new System.Drawing.Point(12, 250);
-            this.lblXCoData.Name = "lblXCoData";
-            this.lblXCoData.Size = new System.Drawing.Size(38, 15);
-            this.lblXCoData.TabIndex = 6;
-            this.lblXCoData.Text = "label2";
-            // 
-            // lblYCo
-            // 
-            this.lblYCo.AutoSize = true;
-            this.lblYCo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblYCo.ForeColor = System.Drawing.Color.White;
-            this.lblYCo.Location = new System.Drawing.Point(12, 280);
-            this.lblYCo.Name = "lblYCo";
-            this.lblYCo.Size = new System.Drawing.Size(111, 21);
-            this.lblYCo.TabIndex = 5;
-            this.lblYCo.Text = "Y-Coordinate";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 229);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "X-Coordinate";
-            // 
-            // btnDiscon
-            // 
-            this.btnDiscon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDiscon.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDiscon.FlatAppearance.BorderSize = 3;
-            this.btnDiscon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDiscon.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDiscon.Location = new System.Drawing.Point(0, 545);
-            this.btnDiscon.Name = "btnDiscon";
-            this.btnDiscon.Size = new System.Drawing.Size(200, 60);
-            this.btnDiscon.TabIndex = 3;
-            this.btnDiscon.Text = "DISCONNECT";
-            this.btnDiscon.UseVisualStyleBackColor = true;
-            this.btnDiscon.Click += new System.EventHandler(this.btnDiscon_Click);
-            // 
-            // btnRecord
-            // 
-            this.btnRecord.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRecord.FlatAppearance.BorderSize = 3;
-            this.btnRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecord.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRecord.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRecord.Location = new System.Drawing.Point(0, 146);
-            this.btnRecord.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.btnRecord.Name = "btnRecord";
-            this.btnRecord.Size = new System.Drawing.Size(200, 60);
-            this.btnRecord.TabIndex = 2;
-            this.btnRecord.Text = "START RECORDING";
-            this.btnRecord.UseVisualStyleBackColor = true;
-            this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
-            // 
-            // btnCalibr
-            // 
-            this.btnCalibr.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalibr.FlatAppearance.BorderSize = 3;
-            this.btnCalibr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalibr.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCalibr.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCalibr.Location = new System.Drawing.Point(0, 73);
-            this.btnCalibr.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.btnCalibr.Name = "btnCalibr";
-            this.btnCalibr.Size = new System.Drawing.Size(200, 60);
-            this.btnCalibr.TabIndex = 1;
-            this.btnCalibr.Text = "CALIBRATION";
-            this.btnCalibr.UseVisualStyleBackColor = true;
-            this.btnCalibr.Click += new System.EventHandler(this.btnCalibr_Click);
-            // 
             // btnConnect
             // 
+            this.btnConnect.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnConnect.AutoSize = true;
             this.btnConnect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConnect.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConnect.FlatAppearance.BorderSize = 3;
             this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnect.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnConnect.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnConnect.Location = new System.Drawing.Point(0, 0);
+            this.btnConnect.Font = new System.Drawing.Font("HelveticaNeueforSAS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConnect.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnConnect.Location = new System.Drawing.Point(616, 328);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(200, 60);
             this.btnConnect.TabIndex = 0;
@@ -175,37 +66,107 @@ namespace instructionForm
             this.gazeBox.TabIndex = 3;
             this.gazeBox.TabStop = false;
             // 
+            // btnCalibr
+            // 
+            this.btnCalibr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalibr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalibr.Font = new System.Drawing.Font("HelveticaNeueforSAS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCalibr.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnCalibr.Location = new System.Drawing.Point(548, 435);
+            this.btnCalibr.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.btnCalibr.Name = "btnCalibr";
+            this.btnCalibr.Size = new System.Drawing.Size(200, 60);
+            this.btnCalibr.TabIndex = 1;
+            this.btnCalibr.Text = "CALIBRATION";
+            this.btnCalibr.UseVisualStyleBackColor = true;
+            this.btnCalibr.Click += new System.EventHandler(this.btnCalibr_Click);
+            // 
+            // btnRecord
+            // 
+            this.btnRecord.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecord.Font = new System.Drawing.Font("HelveticaNeueforSAS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRecord.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnRecord.Location = new System.Drawing.Point(338, 256);
+            this.btnRecord.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.btnRecord.Name = "btnRecord";
+            this.btnRecord.Size = new System.Drawing.Size(200, 60);
+            this.btnRecord.TabIndex = 2;
+            this.btnRecord.Text = "START RECORDING";
+            this.btnRecord.UseVisualStyleBackColor = true;
+            this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
+            // 
+            // btnDiscon
+            // 
+            this.btnDiscon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDiscon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscon.Font = new System.Drawing.Font("HelveticaNeueforSAS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDiscon.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.btnDiscon.Location = new System.Drawing.Point(293, 424);
+            this.btnDiscon.Name = "btnDiscon";
+            this.btnDiscon.Size = new System.Drawing.Size(200, 60);
+            this.btnDiscon.TabIndex = 3;
+            this.btnDiscon.Text = "DISCONNECT";
+            this.btnDiscon.UseVisualStyleBackColor = true;
+            this.btnDiscon.Click += new System.EventHandler(this.btnDiscon_Click);
+            // 
+            // lblTitle1
+            // 
+            this.lblTitle1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitle1.AutoSize = true;
+            this.lblTitle1.Font = new System.Drawing.Font("HelveticaNeueforSAS", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle1.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lblTitle1.Location = new System.Drawing.Point(233, 18);
+            this.lblTitle1.Name = "lblTitle1";
+            this.lblTitle1.Size = new System.Drawing.Size(617, 47);
+            this.lblTitle1.TabIndex = 4;
+            this.lblTitle1.Text = "Welcome to working with your eyes.";
+            this.lblTitle1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblTitle2
+            // 
+            this.lblTitle2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitle2.AutoSize = true;
+            this.lblTitle2.Font = new System.Drawing.Font("HelveticaNeueforSAS", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle2.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lblTitle2.Location = new System.Drawing.Point(46, 115);
+            this.lblTitle2.Name = "lblTitle2";
+            this.lblTitle2.Size = new System.Drawing.Size(970, 47);
+            this.lblTitle2.TabIndex = 5;
+            this.lblTitle2.Text = "Press the connect button to connect with the eye tracker.";
+            // 
             // startForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1061, 605);
+            this.Controls.Add(this.lblTitle2);
+            this.Controls.Add(this.lblTitle1);
+            this.Controls.Add(this.btnDiscon);
             this.Controls.Add(this.gazeBox);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnConnect);
+            this.Controls.Add(this.btnCalibr);
+            this.Controls.Add(this.btnRecord);
             this.Name = "startForm";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.startForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.startForm_KeyDown);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblYCoData;
-        private System.Windows.Forms.Label lblXCoData;
-        private System.Windows.Forms.Label lblYCo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnDiscon;
-        private System.Windows.Forms.Button btnRecord;
-        private System.Windows.Forms.Button btnCalibr;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.PictureBox gazeBox;
+        private System.Windows.Forms.Button btnCalibr;
+        private System.Windows.Forms.Button btnRecord;
+        private System.Windows.Forms.Button btnDiscon;
+        private System.Windows.Forms.Label lblTitle1;
+        private System.Windows.Forms.Label lblTitle2;
     }
 }
 

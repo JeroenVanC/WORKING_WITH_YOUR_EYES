@@ -45,8 +45,21 @@ namespace instructionForm
         public startForm()
         {
             InitializeComponent();
+
+            
+
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = FormBorderStyle.None;
+
+            lblTitle1.Location = new Point(this.Width / 2 - lblTitle1.Width / 2, 30);
+            lblTitle2.Location = new Point(this.Width / 2 - lblTitle2.Width / 2, 80);
+            btnConnect.Location = new Point(this.Width / 2 - btnConnect.Width / 2, 150);
+
+
+            btnCalibr.Hide();
+            btnRecord.Hide();
+            btnDiscon.Hide();
+
             this.KeyPreview = true;
             gazeBox.BackColor = Color.Transparent;
             gazeBox.BringToFront();
@@ -56,8 +69,11 @@ namespace instructionForm
 
         private void btnRecord_Click(object sender, EventArgs e)
         {
-            //thread.Start();
-            timer1 = new System.Threading.Timer(new TimerCallback(recording), null, 250, 5);
+            DemoForm demoFrom = new DemoForm(connection);
+            demoFrom.ShowDialog();
+
+            ////thread.Start();
+            //timer1 = new System.Threading.Timer(new TimerCallback(recording), null, 250, 5);
 
         }
 
@@ -67,7 +83,14 @@ namespace instructionForm
             
             calibrationForm calibrationForm = new calibrationForm(connection);
             calibrationForm.ShowDialog(); // Shows Form2
-            
+
+            //layout
+            btnRecord.Show();
+            btnDiscon.Location = new Point(this.Width / 2 - btnDiscon.Width / 2, 310);
+            btnRecord.Location = new Point(this.Width / 2 - btnRecord.Width / 2, 230);
+            lblTitle2.Text = "You can now start the demo.";
+            lblTitle2.Location = new Point(this.Width / 2 - lblTitle2.Width / 2, 80);
+
         }
 
 
@@ -77,52 +100,59 @@ namespace instructionForm
             //thread = new Thread(new ThreadStart(recording));
             connection = TobiiTracker.subscribe();
 
+            //layout
+            btnConnect.Hide();
+            btnCalibr.Show();
+            btnDiscon.Show();
+            btnCalibr.Location = new Point(this.Width / 2 - btnCalibr.Width / 2, 150);
+            btnDiscon.Location = new Point(this.Width / 2 - btnDiscon.Width / 2, 230);
+            lblTitle2.Text = "Press the calibration button to improve your eye tracking.";
+
         }
 
-        public void recording(object msg)
-        {
-
+        //public void recording(object msg)
+        //{
             
 
-            //while (true)
-            //{
-                TobiiTracker.record(connection.Item1);
-                //Console.WriteLine($"Gaze point: {TobiiTracker.coordinaat_x}, {TobiiTracker.coordinaat_y}");
+        //    //while (true)
+        //    //{
+        //        TobiiTracker.record(connection.Item1);
+        //        //Console.WriteLine($"Gaze point: {TobiiTracker.coordinaat_x}, {TobiiTracker.coordinaat_y}");
 
-                // rooie vierkant
-                xGaze = xAverageGaze.Next(TobiiTracker.coordinaat_x);
-                yGaze = yAverageGaze.Next(TobiiTracker.coordinaat_y);
+        //        // rooie vierkant
+        //        xGaze = xAverageGaze.Next(TobiiTracker.coordinaat_x);
+        //        yGaze = yAverageGaze.Next(TobiiTracker.coordinaat_y);
 
-                // blauwe vierkant
-                xMovingAverage = xAverage.Next(TobiiTracker.coordinaat_x);
-                yMovingAverage = yAverage.Next(TobiiTracker.coordinaat_y);
+        //        // blauwe vierkant
+        //        xMovingAverage = xAverage.Next(TobiiTracker.coordinaat_x);
+        //        yMovingAverage = yAverage.Next(TobiiTracker.coordinaat_y);
 
-                // update x-coor label
-                if (lblXCoData.InvokeRequired)
-                    lblXCoData.Invoke(new MethodInvoker(delegate { lblXCoData.Text = TobiiTracker.coordinaat_x.ToString("0.0000000"); }));
-                else
-                    lblXCoData.Text = "ERROR";
+        //        // update x-coor label
+        //        //if (lblXCoData.InvokeRequired)
+        //        //    lblXCoData.Invoke(new MethodInvoker(delegate { lblXCoData.Text = TobiiTracker.coordinaat_x.ToString("0.0000000"); }));
+        //        //else
+        //        //    lblXCoData.Text = "ERROR";
 
-                // update y-coor label
-                if (lblYCoData.InvokeRequired)
-                    lblYCoData.Invoke(new MethodInvoker(delegate { lblYCoData.Text = TobiiTracker.coordinaat_y.ToString("0.0000000"); }));
-                else
-                    lblYCoData.Text = "ERROR";
+        //        //// update y-coor label
+        //        //if (lblYCoData.InvokeRequired)
+        //        //    lblYCoData.Invoke(new MethodInvoker(delegate { lblYCoData.Text = TobiiTracker.coordinaat_y.ToString("0.0000000"); }));
+        //        //else
+        //        //    lblYCoData.Text = "ERROR";
 
                 
 
-                float formHeight = this.Height;
-                float formWidth = this.Width;
+        //        float formHeight = this.Height;
+        //        float formWidth = this.Width;
 
-                gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * TobiiTracker.coordinaat_x - gazeBox.Width / 2), ((int)(formHeight * TobiiTracker.coordinaat_y - gazeBox.Height / 2))); }));
-                //gazeBoxAvg.Invoke(new MethodInvoker(delegate { gazeBoxAvg.Location = new Point((int)(formWidth * xMovingAverage), ((int)(formHeight * yMovingAverage))); }));
+        //        gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * TobiiTracker.coordinaat_x - gazeBox.Width / 2), ((int)(formHeight * TobiiTracker.coordinaat_y - gazeBox.Height / 2))); }));
+        //        //gazeBoxAvg.Invoke(new MethodInvoker(delegate { gazeBoxAvg.Location = new Point((int)(formWidth * xMovingAverage), ((int)(formHeight * yMovingAverage))); }));
 
-                //bool btnActive;
-                //btnActive = checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp);
+        //        //bool btnActive;
+        //        //btnActive = checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp);
 
 
-            //}
-        }
+        //    //}
+        //}
 
         private void btnDiscon_Click(object sender, EventArgs e)
         {
@@ -139,6 +169,16 @@ namespace instructionForm
                 WindowState = FormWindowState.Normal;
                 TopMost = false;
             }
+        }
+
+        private void startForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

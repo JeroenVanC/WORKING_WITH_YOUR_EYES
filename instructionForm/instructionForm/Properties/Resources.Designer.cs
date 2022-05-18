@@ -63,6 +63,16 @@ namespace instructionForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4_Lego_Bricks {
+            get {
+                object obj = ResourceManager.GetObject("4-Lego-Bricks", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap frozone {
             get {
                 object obj = ResourceManager.GetObject("frozone", resourceCulture);
