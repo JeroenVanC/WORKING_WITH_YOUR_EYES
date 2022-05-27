@@ -61,8 +61,8 @@ namespace instructionForm
             btnDiscon.Hide();
 
             this.KeyPreview = true;
-            gazeBox.BackColor = Color.Transparent;
-            gazeBox.BringToFront();
+            //gazeBox.BackColor = Color.Transparent;
+            //gazeBox.BringToFront();
 
            
         }

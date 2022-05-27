@@ -1,0 +1,17 @@
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\bin\Debug\WorkingWithYourEyesWPF.exe.config
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\bin\Debug\WorkingWithYourEyesWPF.exe
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\bin\Debug\WorkingWithYourEyesWPF.pdb
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\WorkingWithYourEyesWPF.csproj.AssemblyReference.cache
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\MainWindow.g.cs
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\App.g.cs
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\WorkingWithYourEyesWPF_MarkupCompile.cache
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\WorkingWithYourEyesWPF_MarkupCompile.lref
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\MainWindow.baml
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\WorkingWithYourEyesWPF.g.resources
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\WorkingWithYourEyesWPF.Properties.Resources.resources
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\WorkingWithYourEyesWPF.csproj.GenerateResource.cache
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\WorkingWithYourEyesWPF.csproj.CoreCompileInputs.cache
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\WorkingWithYourEyesWPF.exe
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\WorkingWithYourEyesWPF.pdb
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\bin\Debug\tobii\lib\tobii\tobii_stream_engine.dll
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\Debug\WorkingWithYourEyesWPF_Content.g.cs
