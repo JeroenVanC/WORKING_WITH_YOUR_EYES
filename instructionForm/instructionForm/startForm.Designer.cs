@@ -29,15 +29,12 @@ namespace instructionForm
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(startForm));
             this.btnConnect = new System.Windows.Forms.Button();
-            this.gazeBox = new System.Windows.Forms.PictureBox();
             this.btnCalibr = new System.Windows.Forms.Button();
             this.btnRecord = new System.Windows.Forms.Button();
             this.btnDiscon = new System.Windows.Forms.Button();
             this.lblTitle1 = new System.Windows.Forms.Label();
             this.lblTitle2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -55,16 +52,6 @@ namespace instructionForm
             this.btnConnect.Text = "CONNECT";
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
-            // 
-            // gazeBox
-            // 
-            this.gazeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.gazeBox.Image = ((System.Drawing.Image)(resources.GetObject("gazeBox.Image")));
-            this.gazeBox.Location = new System.Drawing.Point(589, 276);
-            this.gazeBox.Name = "gazeBox";
-            this.gazeBox.Size = new System.Drawing.Size(25, 25);
-            this.gazeBox.TabIndex = 3;
-            this.gazeBox.TabStop = false;
             // 
             // btnCalibr
             // 
@@ -144,7 +131,6 @@ namespace instructionForm
             this.Controls.Add(this.lblTitle2);
             this.Controls.Add(this.lblTitle1);
             this.Controls.Add(this.btnDiscon);
-            this.Controls.Add(this.gazeBox);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.btnCalibr);
             this.Controls.Add(this.btnRecord);
@@ -153,7 +139,6 @@ namespace instructionForm
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.startForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.startForm_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,7 +146,6 @@ namespace instructionForm
 
         #endregion
         private System.Windows.Forms.Button btnConnect;
-        private System.Windows.Forms.PictureBox gazeBox;
         private System.Windows.Forms.Button btnCalibr;
         private System.Windows.Forms.Button btnRecord;
         private System.Windows.Forms.Button btnDiscon;

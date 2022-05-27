@@ -1,0 +1,59 @@
+﻿<Window x:Name="mainWindow" x:Class="WorkingWithYourEyesWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkingWithYourEyesWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="803" Width="1492.167"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" KeyDown="mainWindow_KeyDown">
+
+
+    <Grid x:Name="gridMain">
+        <Button x:Name="btnConnect" Content="CONNECT" HorizontalAlignment="Center" VerticalAlignment="Center" Width="226" Height="77" FontSize="20" Click="btnConnect_Click" FontFamily="Roboto" Background="#FF0069C4" Foreground="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="39"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <StackPanel VerticalAlignment="Center" Margin="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="btnCalibrate" Content="CALIBRATE" HorizontalAlignment="Center" VerticalAlignment="Center" Width="230" Height="82" FontSize="20" Click="btnCalibrate_Click" FontFamily="Roboto" Background="#FF0069C4" BorderBrush="{x:Null}" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="39"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnStartDemo" Content="START DEMO" HorizontalAlignment="Center" VerticalAlignment="Top" Width="230" Height="82" FontSize="20" Click="btnStartDemo_Click" Background="#FF0069C4" BorderBrush="{x:Null}" Foreground="White" FontFamily="Roboto">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="39"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </StackPanel>
+        <StackPanel Margin="0,62,0,0" VerticalAlignment="Top" Width="934">
+            <Label Content="WELCOME TO" HorizontalAlignment="Center" FontFamily="Roboto" FontSize="40" Foreground="#FF7A7A78" FontWeight="Bold" Margin="0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="WORKING WITH YOUR" HorizontalAlignment="Left" Padding="5,5,0,5" FontFamily="Roboto" FontSize="40" FontWeight="Bold" Foreground="#FF7A7A78"/>
+                <Label Content=" EYES." Padding="0,5,5,5" Foreground="#FF0069C4" FontFamily="Roboto" FontSize="40" FontWeight="Bold"/>
+            </StackPanel>
+            <Label x:Name="lblInfo" Content="Press the connect button to connect with the eye tracker." HorizontalAlignment="Center" FontFamily="Roboto" FontSize="30" Foreground="#FF7A7A78" />
+            <Label x:Name="lblInfo_second" Content="You can now start the demo." HorizontalAlignment="Center" FontFamily="Roboto" FontSize="30" Foreground="#FF7A7A78" Margin="84.5,0" />
+        </StackPanel>
+        <Button x:Name="btnDisconnect" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Roboto" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,161,0,0" Click="btnDisconnect_Click">
+            <TextBlock TextDecorations="Underline">DISCONNECT</TextBlock>
+        </Button>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="356" Height="210" Margin="0,0,0,15">
+            <Image Height="154" Source="Arkite-logo.jpg" Margin="0,0,10,0"/>
+            <StackPanel Height="64" Orientation="Horizontal" Margin="0,0,0,0">
+                <Image Height="100" Source="1200px-KU_Leuven_logo.svg.png" Width="145"/>
+                <Image Source="download.png" Width="213"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

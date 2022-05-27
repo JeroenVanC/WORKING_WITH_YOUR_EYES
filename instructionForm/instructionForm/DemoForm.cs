@@ -149,9 +149,10 @@ namespace instructionForm
                 {
                     activeTime = timestamp - beginTime;
                     Console.WriteLine(activeTime / 1000000);
-                    if (activeTime > 5000000)
+                    if (activeTime > 1000000)
                     {
                         lookBtn.BackColor = Color.Green;
+                        //lookBtn.Select();
                     }
                 }
                 else
@@ -172,6 +173,11 @@ namespace instructionForm
             }
 
             return true;
+        }
+
+        private void lookBtn_Click(object sender, EventArgs e)
+        {
+            lookBtn.BackColor = Color.Red;
         }
     }
 }

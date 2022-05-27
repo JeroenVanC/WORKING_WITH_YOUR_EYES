@@ -1,0 +1,19 @@
+﻿<Window x:Class="WorkingWithYourEyesWPF.CalibrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkingWithYourEyesWPF"
+        mc:Ignorable="d"
+        Title="CalibrationWindow" Height="1080" Width="1920"
+        WindowStyle="None"
+        WindowState="Maximized">
+    <Grid>
+        <Button x:Name="btnStartCal" Content="START CALIBRATION" VerticalAlignment="Top" Width="492" Height="104" FontSize="24" FontWeight="Bold" Click="btnStartCal_Click" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Canvas.Top="42" Canvas.Left="718" Margin="0,49,0,0"/>
+
+        <!-- Draws an oval with a blue interior and a black outline. -->
+        <Canvas x:Name="canvasCal" HorizontalAlignment="Left" Height="1080" VerticalAlignment="Top" Width="1920">
+            
+        </Canvas>
+    </Grid>
+</Window>

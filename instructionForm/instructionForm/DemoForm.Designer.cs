@@ -89,6 +89,7 @@ namespace instructionForm
             this.lookBtn.TabIndex = 7;
             this.lookBtn.Text = "NEXT";
             this.lookBtn.UseVisualStyleBackColor = true;
+            this.lookBtn.Click += new System.EventHandler(this.lookBtn_Click);
             // 
             // DemoForm
             // 
