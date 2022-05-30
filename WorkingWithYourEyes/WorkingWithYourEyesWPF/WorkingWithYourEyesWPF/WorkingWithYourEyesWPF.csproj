@@ -85,6 +85,21 @@
     <Compile Include="DemoPage3Window.xaml.cs">
       <DependentUpon>DemoPage3Window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DemoPage4Window.xaml.cs">
+      <DependentUpon>DemoPage4Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoPage5Window.xaml.cs">
+      <DependentUpon>DemoPage5Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoPage6Window.xaml.cs">
+      <DependentUpon>DemoPage6Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoPage7Window.xaml.cs">
+      <DependentUpon>DemoPage7Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoPage8Window.xaml.cs">
+      <DependentUpon>DemoPage8Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DemoWindow.xaml.cs">
       <DependentUpon>DemoWindow.xaml</DependentUpon>
     </Compile>
@@ -101,6 +116,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DemoPage3Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoPage4Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoPage5Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoPage6Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoPage7Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoPage8Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -163,6 +198,16 @@
     <Resource Include="instructionPictures_21gr.png" />
     <Resource Include="instructionPictures_61or.png" />
     <Resource Include="instructionPictures_ss2.png" />
+    <Resource Include="instructionPictures_21or.png" />
+    <Resource Include="instructionPictures_ss3.png" />
+    <Resource Include="instructionPictures_ss4.png" />
+    <Resource Include="instructionPictures_longOr.png" />
+    <Resource Include="instructionPictures_ss6.png" />
+    <Resource Include="instructionPictures_ss61.png" />
+    <Resource Include="instructionPictures_wheel.png" />
+    <Resource Include="instructionPictures_ss72.png" />
+    <Resource Include="instructionPictures_ss71.png" />
+    <Resource Include="instructionPictures_ss8.png" />
     <Content Include="tobii\include\tobii\tobii.h" />
     <Content Include="tobii\include\tobii\tobii_advanced.h" />
     <Content Include="tobii\include\tobii\tobii_config.h" />

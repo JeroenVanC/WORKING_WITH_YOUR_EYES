@@ -23,3 +23,13 @@ C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEy
 C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage2Window.baml
 C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage3Window.g.cs
 C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage3Window.baml
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage4Window.g.cs
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage4Window.baml
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage5Window.g.cs
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage5Window.baml
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage6Window.g.cs
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage6Window.baml
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage7Window.g.cs
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage7Window.baml
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage8Window.g.cs
+C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\obj\x64\Debug\DemoPage8Window.baml

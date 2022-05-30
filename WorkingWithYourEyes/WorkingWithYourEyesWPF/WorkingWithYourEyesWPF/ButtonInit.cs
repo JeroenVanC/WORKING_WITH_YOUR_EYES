@@ -39,22 +39,22 @@ namespace WorkingWithYourEyesWPF
             bool btnActive;
             //btnActive = checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp);
 
-            // button handler
-            if (buttonHandlerBack.checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp, btnBack, 1000000, false))
-            {
-                window.Dispatcher.Invoke(() =>
-                {
-                    //backFunc();
-                });
+            //// button handler
+            //if (buttonHandlerBack.checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp, btnBack, 1000000, false))
+            //{
+            //    window.Dispatcher.Invoke(() =>
+            //    {
+            //        //backFunc();
+            //    });
 
-            }
-            else if (buttonHandlerNext.checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp, btnNext, 1000000, false))
-            {
-                window.Dispatcher.Invoke(() =>
-                {
-                    //nextFunc();
-                });
-            };
+            //}
+            //else if (buttonHandlerNext.checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp, btnNext, 1000000, false))
+            //{
+            //    window.Dispatcher.Invoke(() =>
+            //    {
+            //        //nextFunc();
+            //    });
+            //};
         }
     }
 }

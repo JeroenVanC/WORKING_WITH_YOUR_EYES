@@ -100,7 +100,7 @@ namespace WorkingWithYourEyesWPF
         private void nextFunc()
         {
             timer1.Change(Timeout.Infinite, Timeout.Infinite);
-            var nextWindow = new DemoPage3Window(demoConnection);
+            var nextWindow = new DemoPage4Window(demoConnection);
             nextWindow.Show();
             Close();
         }
