@@ -33,6 +33,9 @@ namespace Calibration
 
         private System.Threading.Timer timer1;
 
+        public string path = String.Format(@"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\python\");
+
+
         public CalibrationStartForm()
         {
             InitializeComponent();
@@ -51,6 +54,7 @@ namespace Calibration
             timer1.Change(Timeout.Infinite, Timeout.Infinite);
             TobiiTracker.unsubscribe(connection.Item1, connection.Item2);
         }
+
 
         private void CalibrationStartForm_KeyDown(object sender, KeyEventArgs e)
         {
@@ -73,6 +77,8 @@ namespace Calibration
             timer1 = new System.Threading.Timer(new TimerCallback(recording), null, 250, 5);
         }
 
+        
+
         public void recording(object msg)
         {
 
@@ -90,11 +96,13 @@ namespace Calibration
             float formWidth = this.Width;
 
             gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * TobiiTracker.coordinaat_x - gazeBox.Width / 2), ((int)(formHeight * TobiiTracker.coordinaat_y - gazeBox.Height / 2))); }));
+
+
         }
 
         private void btnTestCal_Click(object sender, EventArgs e)
         {
-            testCalibrationForm testCalibrationForm = new testCalibrationForm();
+            testCalibrationForm testCalibrationForm = new testCalibrationForm(connection);
             testCalibrationForm.ShowDialog();
 
         }

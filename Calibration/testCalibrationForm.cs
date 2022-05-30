@@ -12,18 +12,20 @@ namespace Calibration
 {
     public partial class testCalibrationForm : Form
     {
-
-        private System.Threading.Timer timer;
+        public static Tuple<IntPtr, IntPtr> calConnection;
+        private System.Threading.Timer timer, timer1;
+        public TobiiTracker tobiiTracker = new TobiiTracker();
         public int counter = 0;
-        public string path = String.Format(@"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\");
+        public string path = String.Format(@"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\Calibration\python\");
 
-        public string filename = "test.txt";
 
-        public testCalibrationForm()
+        public testCalibrationForm(Tuple<IntPtr, IntPtr> connection)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = FormBorderStyle.None;
+
+            calConnection = connection;
 
             btnStartTestCal.Location = new Point(this.Width / 2 - btnStartTestCal.Width / 2, 30);
         }
@@ -37,11 +39,35 @@ namespace Calibration
                 Directory.CreateDirectory(path);
             }
 
-            //string time = DateTime.Now.ToString("yyyy-MM-dd");
-            //File.WriteAllText(path + filename, time + "\n");
-            //File.WriteAllText(path + filename, "test\n");
             timer = new System.Threading.Timer(new TimerCallback(StartTest), null, 250, 25);
+            timer1 = new System.Threading.Timer(new TimerCallback(recording), null, 250, 5);
 
+        }
+
+        public void recording(object msg)
+        {
+            TobiiTracker.record(calConnection.Item1);
+        }
+
+        public List<string> coordinates = new List<string>();
+
+        private void printCoorToArray()
+        {
+            
+                coordinates.Add((int)(TobiiTracker.coordinaat_x * 1920) + "," + (int)(TobiiTracker.coordinaat_y * 1080));
+
+        }
+
+        private void writeArrayToFile()
+        {
+            
+            using (StreamWriter outputFile = new StreamWriter(path + "ninePointCal2.csv"))
+            {
+                for (int i = 0; i < coordinates.Count; i++)
+                {
+                outputFile.WriteLine(coordinates[i]);
+                }
+            }
         }
 
 
@@ -55,12 +81,6 @@ namespace Calibration
             {
                 btnStartTestCal.Hide();
             }));
-
-            using (StreamWriter sw = File.AppendText(path+ filename))
-            {
-                sw.WriteLine(counter);
-            }
-
 
             if (counter < TimeRed)
             {
@@ -77,6 +97,7 @@ namespace Calibration
                 testCal1.Invoke(new MethodInvoker(delegate
                 {
                     testCal1.BackColor = Color.Orange;
+                    printCoorToArray();
                 }));
             }
             else if (counter >= (TimeRed + TimeOrange) && counter < (2 * TimeRed + TimeOrange))
@@ -98,6 +119,7 @@ namespace Calibration
                 testCal2.Invoke(new MethodInvoker(delegate
                 {
                     testCal2.BackColor = Color.Orange;
+                    printCoorToArray();
                 }));
             }
             else if (counter >= (2 * TimeRed + 2 * TimeOrange) && counter < (3 * TimeRed + 2 * TimeOrange))
@@ -119,6 +141,7 @@ namespace Calibration
                 testCal3.Invoke(new MethodInvoker(delegate
                 {
                     testCal3.BackColor = Color.Orange;
+                    printCoorToArray();
                 }));
             }
             else if (counter >= (3 * TimeRed + 3 * TimeOrange) && counter < (4 * TimeRed + 3 * TimeOrange))
@@ -140,6 +163,7 @@ namespace Calibration
                 testCal4.Invoke(new MethodInvoker(delegate
                 {
                     testCal4.BackColor = Color.Orange;
+                    printCoorToArray();
                 }));
             }
             else if (counter >= (4 * TimeRed + 4 * TimeOrange) && counter < (5 * TimeRed + 4 * TimeOrange))
@@ -161,6 +185,7 @@ namespace Calibration
                 testCal5.Invoke(new MethodInvoker(delegate
                 {
                     testCal5.BackColor = Color.Orange;
+                    printCoorToArray();
                 }));
             }
             else if (counter >= (5 * TimeRed + 5 * TimeOrange) && counter < (6 * TimeRed + 5 * TimeOrange))
@@ -182,6 +207,7 @@ namespace Calibration
                 testCal6.Invoke(new MethodInvoker(delegate
                 {
                     testCal6.BackColor = Color.Orange;
+                    printCoorToArray();
                 }));
             }
             else if (counter >= (6 * TimeRed + 6 * TimeOrange) && counter < (7 * TimeRed + 6 * TimeOrange))
@@ -203,6 +229,7 @@ namespace Calibration
                 testCal7.Invoke(new MethodInvoker(delegate
                 {
                     testCal7.BackColor = Color.Orange;
+                    printCoorToArray();
                 }));
             }
             else if (counter >= (7 * TimeRed + 7 * TimeOrange) && counter < (8 * TimeRed + 7 * TimeOrange))
@@ -224,6 +251,7 @@ namespace Calibration
                 testCal8.Invoke(new MethodInvoker(delegate
                 {
                     testCal8.BackColor = Color.Orange;
+                    printCoorToArray();
                 }));
             }
             else if (counter >= (8 * TimeRed + 8 * TimeOrange) && counter < (9 * TimeRed + 8 * TimeOrange))
@@ -245,6 +273,7 @@ namespace Calibration
                 testCal9.Invoke(new MethodInvoker(delegate
                 {
                     testCal9.BackColor = Color.Orange;
+                    printCoorToArray();
                 }));
             }
             else if (counter >= (9 * TimeRed + 9 * TimeOrange) && counter < (10 * TimeRed + 9 * TimeOrange))
@@ -257,6 +286,14 @@ namespace Calibration
             } else
             {
                 timer.Change(Timeout.Infinite, Timeout.Infinite);
+                timer1.Change(Timeout.Infinite, Timeout.Infinite);
+
+                writeArrayToFile();
+
+                this.Invoke((MethodInvoker)delegate
+                {
+                    this.Close();
+                });
             }
 
             counter++;
