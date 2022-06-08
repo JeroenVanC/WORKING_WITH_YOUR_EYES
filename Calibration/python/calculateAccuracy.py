@@ -6,7 +6,7 @@ import numpy as np
 # Read the CSV into a pandas data frame (df)
 #   With a df you can do many things
 #   most important: visualize data with Seaborn
-df = pd.read_csv('C:/Users/jonas/SynologyDrive/GIT/WORKING_WITH_YOUR_EYES/Calibration/python/onePointCal2.csv', delimiter=',')
+df = pd.read_csv('C:/Users/jonas/SynologyDrive/GIT/WORKING_WITH_YOUR_EYES/Calibration/python/5_30_22_normal.csv', delimiter=',')
 
 xCoorTest = []
 yCoorTest = []

@@ -90,9 +90,9 @@ namespace WorkingWithYourEyesWPF
             }
 
             // path jonas:
-            //string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\instructionForm\instructionForm\tobii\se_license_key";
+            string licensePath = @"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\tobii\se_license_key";
             // path jeroen:
-            string licensePath = @"C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\tobii\se_license_key";
+            //string licensePath = @"C:\masterproef\code\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\tobii\se_license_key";
             IntPtr deviceContext;
             deviceContext = CreateTrackerWithLicense(apiContext, urls[0], licensePath);
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
@@ -123,8 +123,13 @@ namespace WorkingWithYourEyesWPF
             Console.WriteLine("DISPLAY AREA: | bottem left: (" + displayArea.bottom_left_mm_xyz.x + "," + displayArea.bottom_left_mm_xyz.y + "," + displayArea.bottom_left_mm_xyz.z + ")");
 
             // Calcualte display area
-            float width_mm = (float)365.0;
-            float height_mm = (float)210.0;
+            //// LQPTOP SCREEN SIZE
+            //float width_mm = (float)365.0;
+            //float height_mm = (float)210.0;
+            //float offset_x_mm = (float)0.0;
+            // MONITOR SCREEN SIZE
+            float width_mm = (float)535.0;
+            float height_mm = (float)300.0;
             float offset_x_mm = (float)0.0;
 
             result = Interop.tobii_calculate_display_area_basic(deviceContext, width_mm, height_mm, offset_x_mm, ref geometry, out displayArea);

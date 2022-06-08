@@ -42,7 +42,8 @@ namespace WorkingWithYourEyesWPF
         private NextButtonHandler buttonHandlerNext;
         private NextButtonHandler buttonHandlerBack;
 
-
+        private bool nextActive = false;
+        private bool backActive = false;
         public DemoPage3Window(Tuple<IntPtr, IntPtr> connection)
         {
             InitializeComponent();
@@ -80,16 +81,18 @@ namespace WorkingWithYourEyesWPF
             //btnActive = checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp);
 
             // button handler
-            if (buttonHandlerBack.checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp, btnBack, 1000000, false))
+            if (buttonHandlerBack.checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp, btnBack, 1000000, false) && backActive == false)
             {
+                backActive = true;
                 Dispatcher.Invoke(() =>
                 {
                     backFunc();
                 });
 
             }
-            else if (buttonHandlerNext.checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp, btnNext, 1000000, false))
+            else if (buttonHandlerNext.checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp, btnNext, 1000000, false) && nextActive == false)
             {
+                nextActive = true;
                 Dispatcher.Invoke(() =>
                 {
                     nextFunc();

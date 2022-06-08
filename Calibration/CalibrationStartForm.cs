@@ -98,6 +98,10 @@ namespace Calibration
             gazeBox.Invoke(new MethodInvoker(delegate { gazeBox.Location = new Point((int)(formWidth * TobiiTracker.coordinaat_x - gazeBox.Width / 2), ((int)(formHeight * TobiiTracker.coordinaat_y - gazeBox.Height / 2))); }));
 
 
+            lbl_coor_head_x.Invoke(new MethodInvoker(delegate { lbl_coor_head_x.Text = TobiiTracker.coordinaat_head_x.ToString("0.00000000"); }));
+            lbl_coor_head_y.Invoke(new MethodInvoker(delegate { lbl_coor_head_y.Text = TobiiTracker.coordinaat_head_y.ToString("0.00000000"); }));
+            lbl_coor_head_z.Invoke(new MethodInvoker(delegate { lbl_coor_head_z.Text = TobiiTracker.coordinaat_head_z.ToString("0.00000000"); }));
+
         }
 
         private void btnTestCal_Click(object sender, EventArgs e)

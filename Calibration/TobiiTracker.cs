@@ -14,8 +14,13 @@ namespace Calibration
         public static float coordinaat_y;
         public static long timestamp;
 
+        public static float coordinaat_head_x;
+        public static float coordinaat_head_y;
+        public static float coordinaat_head_z;
+
         private static tobii_gaze_point_callback_t newOnGazePoint = new tobii_gaze_point_callback_t(OnGazePoint);
         private static tobii_notifications_callback_t newNotificationCallCallback = new tobii_notifications_callback_t(NotificationCallCallback);
+        private static tobii_head_pose_callback_t newHeadPoseCallback = new tobii_head_pose_callback_t(HeadPoseCallback);
 
         private static void OnGazePoint(ref tobii_gaze_point_t gazePoint, IntPtr userData)
         {
@@ -40,6 +45,16 @@ namespace Calibration
                 {
                     Console.WriteLine("calibration stopped\n");
                 }
+            }
+        }
+
+        private static void HeadPoseCallback( ref tobii_head_pose_t head_pose, IntPtr user_data)
+        {
+            if (head_pose.position_validity == tobii_validity_t.TOBII_VALIDITY_VALID)
+            {
+                coordinaat_head_x = head_pose.position_xyz.x;
+                coordinaat_head_y = head_pose.position_xyz.y;
+                coordinaat_head_z = head_pose.position_xyz.z;
             }
         }
         public static IntPtr CreateTrackerWithLicense(IntPtr api, string url, string licenseFileName)
@@ -71,6 +86,13 @@ namespace Calibration
             Interop.tobii_device_process_callbacks(deviceContext);
             //Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
             //}
+
+
+            //HEAD TRACKING!!!!!!!!!!!!!!!!!!!!!
+
+            
+
+
         }
 
         public static Tuple<IntPtr, IntPtr> subscribe()
@@ -106,6 +128,9 @@ namespace Calibration
             result = Interop.tobii_notifications_subscribe(deviceContext, newNotificationCallCallback);
             Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
 
+            // Subscribe to head tracking
+            result = Interop.tobii_head_pose_subscribe(deviceContext, newHeadPoseCallback);
+            Debug.Assert(result == tobii_error_t.TOBII_ERROR_NO_ERROR);
 
             // Get geometry mounting
             tobii_geometry_mounting_t geometry;

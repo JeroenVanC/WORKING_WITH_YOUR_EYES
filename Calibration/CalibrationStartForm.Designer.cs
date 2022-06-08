@@ -34,6 +34,9 @@
             this.btnRecord = new System.Windows.Forms.Button();
             this.gazeBox = new System.Windows.Forms.PictureBox();
             this.btnTestCal = new System.Windows.Forms.Button();
+            this.lbl_coor_head_x = new System.Windows.Forms.Label();
+            this.lbl_coor_head_y = new System.Windows.Forms.Label();
+            this.lbl_coor_head_z = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,11 +99,38 @@
             this.btnTestCal.UseVisualStyleBackColor = true;
             this.btnTestCal.Click += new System.EventHandler(this.btnTestCal_Click);
             // 
+            // lbl_coor_head_x
+            // 
+            this.lbl_coor_head_x.AutoSize = true;
+            this.lbl_coor_head_x.Location = new System.Drawing.Point(327, 35);
+            this.lbl_coor_head_x.Name = "lbl_coor_head_x";
+            this.lbl_coor_head_x.Size = new System.Drawing.Size(0, 15);
+            this.lbl_coor_head_x.TabIndex = 6;
+            // 
+            // lbl_coor_head_y
+            // 
+            this.lbl_coor_head_y.AutoSize = true;
+            this.lbl_coor_head_y.Location = new System.Drawing.Point(327, 60);
+            this.lbl_coor_head_y.Name = "lbl_coor_head_y";
+            this.lbl_coor_head_y.Size = new System.Drawing.Size(0, 15);
+            this.lbl_coor_head_y.TabIndex = 7;
+            // 
+            // lbl_coor_head_z
+            // 
+            this.lbl_coor_head_z.AutoSize = true;
+            this.lbl_coor_head_z.Location = new System.Drawing.Point(327, 87);
+            this.lbl_coor_head_z.Name = "lbl_coor_head_z";
+            this.lbl_coor_head_z.Size = new System.Drawing.Size(0, 15);
+            this.lbl_coor_head_z.TabIndex = 8;
+            // 
             // CalibrationStartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_coor_head_z);
+            this.Controls.Add(this.lbl_coor_head_y);
+            this.Controls.Add(this.lbl_coor_head_x);
             this.Controls.Add(this.btnTestCal);
             this.Controls.Add(this.gazeBox);
             this.Controls.Add(this.btnRecord);
@@ -112,6 +142,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalibrationStartForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gazeBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -123,5 +154,8 @@
         private Button btnRecord;
         private PictureBox gazeBox;
         private Button btnTestCal;
+        private Label lbl_coor_head_x;
+        private Label lbl_coor_head_y;
+        private Label lbl_coor_head_z;
     }
 }

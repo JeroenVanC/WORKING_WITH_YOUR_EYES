@@ -41,7 +41,7 @@ namespace WorkingWithYourEyesWPF
 
         public float xMovingAverage;
         public float yMovingAverage;
-        private bool nextBtnActive = false;
+        private bool nextActive = false;
 
         private NextButtonHandler buttonHandler;
 
@@ -83,9 +83,9 @@ namespace WorkingWithYourEyesWPF
             //btnActive = checkIfBtnActive(xGaze, yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp);
 
             // button handler
-            if(buttonHandler.checkIfBtnActive(xGaze,yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp, btnStartDemo, 2500000, true))
+            if(buttonHandler.checkIfBtnActive(xGaze,yGaze, xMovingAverage, yMovingAverage, TobiiTracker.timestamp, btnStartDemo, 2500000, true) && nextActive == false)
             {
-                timer1.Change(Timeout.Infinite, Timeout.Infinite);
+                nextActive = true;
                 Dispatcher.Invoke(() => 
                 {
                     nextFunc();
@@ -101,7 +101,7 @@ namespace WorkingWithYourEyesWPF
         public void nextFunc()
         {
 
-            
+            timer1.Change(Timeout.Infinite, Timeout.Infinite);
             var nextWindow = new DemoPage2Window(demoConnection);
             nextWindow.Show();
             Close();
