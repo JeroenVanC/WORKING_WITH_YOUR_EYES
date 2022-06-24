@@ -6,7 +6,7 @@ import numpy as np
 # Read the CSV into a pandas data frame (df)
 #   With a df you can do many things
 #   most important: visualize data with Seaborn
-df = pd.read_csv('C:/Users/jonas/SynologyDrive/GIT/WORKING_WITH_YOUR_EYES/Calibration/python/5_30_22_normal.csv', delimiter=',')
+df = pd.read_csv('C:/Users/jonas/SynologyDrive/GIT/WORKING_WITH_YOUR_EYES/Calibration/python/cal_sunglasses_3.csv', delimiter=',')
 
 xCoorTest = []
 yCoorTest = []
@@ -94,4 +94,6 @@ meanErrorPoint6 = df_point6['distance'].sum() / 150
 meanErrorPoint7 = df_point7['distance'].sum() / 150
 meanErrorPoint8 = df_point8['distance'].sum() / 150
 meanErrorPoint9 = df_point9['distance'].sum() / 150
+
+totalMeanError = (meanErrorPoint1 + meanErrorPoint2 + meanErrorPoint3 + meanErrorPoint4 + meanErrorPoint5 + meanErrorPoint6 + meanErrorPoint7 + meanErrorPoint8 + meanErrorPoint9)/9
 

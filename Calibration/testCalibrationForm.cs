@@ -61,8 +61,9 @@ namespace Calibration
         private void writeArrayToFile()
         {
             
-            using (StreamWriter outputFile = new StreamWriter(path + "5_30_22_x_offset.csv"))
+            using (StreamWriter outputFile = new StreamWriter(path + "cal_sunglasses_3.csv"))
             {
+                outputFile.WriteLine("x,y");
                 for (int i = 0; i < coordinates.Count; i++)
                 {
                 outputFile.WriteLine(coordinates[i]);

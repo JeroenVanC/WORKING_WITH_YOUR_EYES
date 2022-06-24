@@ -149,8 +149,8 @@ namespace Calibration
             Console.WriteLine("DISPLAY AREA: | bottem left: (" + displayArea.bottom_left_mm_xyz.x + "," + displayArea.bottom_left_mm_xyz.y + "," + displayArea.bottom_left_mm_xyz.z + ")");
 
             // Calcualte display area
-            float width_mm = (float)365.0;
-            float height_mm = (float)210.0;
+            float width_mm = (float)535.0;
+            float height_mm = (float)300.0;
             float offset_x_mm = (float)0.0;
 
             result = Interop.tobii_calculate_display_area_basic(deviceContext, width_mm, height_mm, offset_x_mm, ref geometry, out displayArea);
