@@ -38,6 +38,7 @@
             this.testCal8 = new System.Windows.Forms.PictureBox();
             this.testCal7 = new System.Windows.Forms.PictureBox();
             this.btnStartTestCal = new System.Windows.Forms.Button();
+            this.fileNameBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.testCal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testCal2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testCal3)).BeginInit();
@@ -142,11 +143,20 @@
             this.btnStartTestCal.UseVisualStyleBackColor = true;
             this.btnStartTestCal.Click += new System.EventHandler(this.btnStartTestCal_Click);
             // 
+            // fileNameBox
+            // 
+            this.fileNameBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fileNameBox.Location = new System.Drawing.Point(333, 43);
+            this.fileNameBox.Name = "fileNameBox";
+            this.fileNameBox.Size = new System.Drawing.Size(100, 23);
+            this.fileNameBox.TabIndex = 10;
+            // 
             // testCalibrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.fileNameBox);
             this.Controls.Add(this.btnStartTestCal);
             this.Controls.Add(this.testCal9);
             this.Controls.Add(this.testCal8);
@@ -185,5 +195,6 @@
         private PictureBox testCal8;
         private PictureBox testCal7;
         private Button btnStartTestCal;
+        private TextBox fileNameBox;
     }
 }

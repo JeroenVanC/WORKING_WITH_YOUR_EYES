@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -46,6 +47,9 @@ namespace WorkingWithYourEyesWPF
         private bool nextActive = false;
         private bool backActive = false;
 
+        public List<string> coordinates = new List<string>();
+        public string path = String.Format(@"C:\Users\jonas\SynologyDrive\GIT\WORKING_WITH_YOUR_EYES\WorkingWithYourEyes\WorkingWithYourEyesWPF\WorkingWithYourEyesWPF\Data\");
+
 
         public DemoPage2Window(Tuple<IntPtr, IntPtr> connection)
         {
@@ -54,10 +58,41 @@ namespace WorkingWithYourEyesWPF
             buttonHandlerNext = new NextButtonHandler(this, 10, 150);
             buttonHandlerBack = new NextButtonHandler(this, 10, 150);
 
+            if (!string.IsNullOrWhiteSpace(path) && !Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
             timer1 = new Timer(new TimerCallback(recording), null, 250, 5);
         }
 
+        private void printCoorToArray()
+        {
 
+            coordinates.Add((int)(TobiiTracker.coordinaat_x * 1920) + "," + (int)(TobiiTracker.coordinaat_y * 1080));
+
+        }
+
+        public static String GetTimestamp(DateTime value)
+        {
+            return value.ToString("yyyyMMddHHmmssffff");
+        }
+
+        private void writeArrayToFile()
+        {
+
+            String timeStamp = GetTimestamp(DateTime.Now);
+            String fullPath = path + "page2_" + timeStamp + ".csv";
+
+            using (StreamWriter outputFile = new StreamWriter(fullPath))
+            {
+                outputFile.WriteLine("x,y");
+                for (int i = 0; i < coordinates.Count; i++)
+                {
+                    outputFile.WriteLine(coordinates[i]);
+                }
+            }
+        }
 
         public void recording(object msg)
         {
@@ -102,11 +137,15 @@ namespace WorkingWithYourEyesWPF
                     nextFunc();
                 });
             };
+
+            printCoorToArray();
+
         }
 
         private void nextFunc()
         {
             timer1.Change(Timeout.Infinite, Timeout.Infinite);
+            writeArrayToFile();
             var nextWindow = new DemoPage3Window(demoConnection);
             nextWindow.Show();
             Close();
@@ -115,6 +154,7 @@ namespace WorkingWithYourEyesWPF
         public void backFunc()
         {
             timer1.Change(Timeout.Infinite, Timeout.Infinite);
+            writeArrayToFile();
             var nextWindow = new DemoWindow(demoConnection);
             nextWindow.Show();
             Close();

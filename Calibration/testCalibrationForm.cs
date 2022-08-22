@@ -27,21 +27,25 @@ namespace Calibration
 
             calConnection = connection;
 
-            btnStartTestCal.Location = new Point(this.Width / 2 - btnStartTestCal.Width / 2, 30);
+            fileNameBox.Location = new Point(this.Width / 2 - fileNameBox.Width / 2, 30);
+            btnStartTestCal.Location = new Point(this.Width / 2 - btnStartTestCal.Width / 2, 60);
         }
 
         private void btnStartTestCal_Click(object sender, EventArgs e)
         {
-
-
-            if (!string.IsNullOrWhiteSpace(path) && !Directory.Exists(path))
+            if (fileNameBox.Text.Equals(""))
             {
-                Directory.CreateDirectory(path);
+
+            } else
+            {
+                if (!string.IsNullOrWhiteSpace(path) && !Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+
+                timer = new System.Threading.Timer(new TimerCallback(StartTest), null, 250, 25);
+                //timer1 = new System.Threading.Timer(new TimerCallback(recording), null, 250, 5);
             }
-
-            timer = new System.Threading.Timer(new TimerCallback(StartTest), null, 250, 25);
-            timer1 = new System.Threading.Timer(new TimerCallback(recording), null, 250, 5);
-
         }
 
         public void recording(object msg)
@@ -61,7 +65,7 @@ namespace Calibration
         private void writeArrayToFile()
         {
             
-            using (StreamWriter outputFile = new StreamWriter(path + "cal_sunglasses_3.csv"))
+            using (StreamWriter outputFile = new StreamWriter(path + fileNameBox.Text + ".csv"))
             {
                 outputFile.WriteLine("x,y");
                 for (int i = 0; i < coordinates.Count; i++)
@@ -81,6 +85,7 @@ namespace Calibration
             btnStartTestCal.Invoke(new MethodInvoker(delegate
             {
                 btnStartTestCal.Hide();
+                fileNameBox.Hide();
             }));
 
             if (counter < TimeRed)
